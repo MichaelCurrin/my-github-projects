@@ -1,4 +1,4 @@
-# Github Projects
+# My Github Projects
 > Portfolio of projects, built as a static site that groups Github repos by topic labels
 
 [![Made with Jekyll](https://img.shields.io/badge/Made%20with-Jekyll-blue.svg)](https://jekyllrb.com)
