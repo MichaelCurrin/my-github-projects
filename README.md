@@ -6,3 +6,8 @@
 [![Made with Github GQL](https://img.shields.io/badge/Made%20with-Github%20GraphQL-blue.svg)](https://developer.github.com/v4/)
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/gh-projects.svg)](https://GitHub.com/MichaelCurrin/gh-projects/tags/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/gh-projects/blob/master/LICENSE)
+
+
+## Requirements
+
+A newer version of Ruby such as `2.6` for Jekyll 4 support.
