@@ -1,0 +1,23 @@
+title: My Github Projects
+
+collections:
+  topics:
+    output: true
+
+defaults:
+  - scope:
+      path: "_topics/*"
+    values:
+      layout: "topic"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+exclude:
+  - vendor/
+  - LICENSE
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - Makefile
