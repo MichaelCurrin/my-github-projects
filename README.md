@@ -10,4 +10,7 @@
 
 ## Requirements
 
-A newer version of Ruby such as `2.6` for Jekyll 4 support.
+- Ruby >= 2.4
+- Bundler
+
+This project used Jekyll 4 - see [Upgrading Jekyll](https://jekyllrb.com/docs/upgrading/3-to-4/).
