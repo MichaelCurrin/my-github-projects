@@ -14,3 +14,16 @@
 - Bundler
 
 This project used Jekyll 4 - see [Upgrading Jekyll](https://jekyllrb.com/docs/upgrading/3-to-4/).
+
+
+## Usage
+
+```sh
+$ make serve
+```
+
+The Jekyll errors are not verbose, but this running with `--trace` command here.
+
+```sh
+$ make debug
+```
