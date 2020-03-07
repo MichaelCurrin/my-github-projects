@@ -1,3 +1,6 @@
+export ACCESS_TOKEN=''
+
+
 help:
 	@egrep '^\S|^$$' Makefile
 
@@ -10,7 +13,7 @@ upgrade:
 
 
 s serve:
-	bundle exec jekyll serve -l
+	source .env && bundle exec jekyll serve -l
 
 debug:
-	bundle exec jekyll build --trace
+	source .env && bundle exec jekyll build --trace
