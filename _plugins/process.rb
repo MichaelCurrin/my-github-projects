@@ -13,7 +13,7 @@ module GithubData
 		for fetched_repo in fetched_repos do
 			if DEBUG
 				puts "FETCHED #{fetched_repo["name"]}"
-      end
+      		end
 
 			repo_topics = fetched_repo["repositoryTopics"]["nodes"]
 			# TODO Use other attributes. For now just repo name.
@@ -30,9 +30,9 @@ module GithubData
 			repos[repo['name']] = repo
 
 			for topic in topics_of_fetched_repo do
-			  if DEBUG
-				  puts "  TOPIC #{topic}"
-        end
+			    if DEBUG
+				    puts "  TOPIC #{topic}"
+        		end
 
 				stored_topics = topics[topic]
 				stored_topics[repo["name"]] = repo
