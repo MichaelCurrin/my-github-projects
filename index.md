@@ -3,5 +3,7 @@ title: Home
 layout: home
 ---
 
-- [Topics]({% link topics.md %})
+Github profile: [{{ site.github.owner_name }}]({{ site.github.owner_url }})
+
+- [All topics]({% link all_topics.md %})
 - [All repos]({% link all_repos.md %})
