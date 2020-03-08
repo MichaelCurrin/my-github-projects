@@ -5,6 +5,8 @@ query ReposWithTopics {
         repositories(first: 100, ownerAffiliations: OWNER, privacy: PUBLIC, orderBy: { field: NAME, direction: ASC }) {
             nodes {
                 name
+                url
+                description
                 # Dates
                 createdAt
                 updatedAt

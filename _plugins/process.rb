@@ -9,8 +9,14 @@ module GithubData
     # A class or struct was not practical so an ad hoc hash is used here.
     repo = {}
     repo['name'] = fetched_repo['name']
+    repo['url'] = fetched_repo['url']
+    repo['description'] = fetched_repo['description']
+
     repo['created_at'] = fetched_repo['createdAt']
+    repo['updated_at'] = fetched_repo['updatedAt']
+
     repo['stars'] = fetched_repo['stargazers']['totalCount']
+    repo['forks'] = fetched_repo['forkCount']
 
     fetched_topics = fetched_repo['repositoryTopics']['nodes']
     # List of topic names.

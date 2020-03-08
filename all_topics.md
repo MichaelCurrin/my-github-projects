@@ -10,6 +10,11 @@ layout: page
 
 {% assign repos = topic[1] %}
 {% for repo in repos %}
-* Name: {{ repo[0] }} Stars: {{ repo[1].stars }} Created: {{ repo[1].created_at }}
+- [{{ repo[0] }}]({{ repo[1].url }})
+    * Description: {{ repo[1].description }}
+    * Stars: {{ repo[1].stars }}
+    * Forks: {{ repo[1].forks }}
+    * Updated: {{ repo[1].updated_at | date_to_string }}
+    * Created: {{ repo[1].created_at | date_to_string }}
 {% endfor -%}
 {% endfor %}
