@@ -16,8 +16,10 @@
     - [Install](#install)
     - [Run](#run)
 - [Development](#development)
+    - [Access token](#access-token)
     - [Reloading](#reloading)
     - [Running scripts](#running-scripts)
+    - [Github pages use](#github-pages-use)
 
 ## Requirements
 
