@@ -16,4 +16,4 @@ s serve:
 	source .env && bundle exec jekyll serve -l
 
 debug:
-	source .env && bundle exec jekyll build --trace
+	DEBUG=1 source .env && bundle exec jekyll build --trace
