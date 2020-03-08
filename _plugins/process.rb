@@ -3,11 +3,8 @@ require_relative 'request'
 DEBUG = ENV['DEBUG']
 
 module GithubData
-  def self.get_gh_data
-    resp_data = Request.query
 
-    fetched_repos = resp_data['viewer']['repositories']['nodes']
-
+  def self.process_repos(fetched_repos)
     repos = {}
     topics = Hash.new { |hash, key| hash[key] = {} }
 
@@ -42,5 +39,11 @@ module GithubData
     end
 
     [repos, topics]
+  end
+
+  def self.get_gh_data
+    resp_data = Request.query
+    fetched_repos = resp_data['viewer']['repositories']['nodes']
+    self.process_repos(fetched_repos)
   end
 end
