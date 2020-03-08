@@ -1,5 +1,8 @@
 title: My Github Projects
 
+url: ""
+baseurl: /my-github-projects
+
 collections:
   topics:
     output: true
