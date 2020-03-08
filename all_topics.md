@@ -8,7 +8,8 @@ layout: page
 {% for topic in sorted_topics %}
 ### {{ topic[0] }}
 
-{% for repos in topic[1] %}
-* Name: {{ repos[0] }} Stars: {{ repos[1].stars }} Created: {{ repos[1].created_at }}
+{% assign repos = topic[1] %}
+{% for repo in repos %}
+* Name: {{ repo[0] }} Stars: {{ repo[1].stars }} Created: {{ repo[1].created_at }}
 {% endfor -%}
 {% endfor %}
