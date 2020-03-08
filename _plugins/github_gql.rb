@@ -6,9 +6,6 @@ module GithubGQL
     def generate(site)
       repos, topics = GithubData.get_gh_data
 
-      # TODO: Sort by name, date, etc.
-      # site.data.all_repos = repos.values.to_a
-
       site.data['all_repos'] = repos
       site.data['all_topics'] = topics
 
