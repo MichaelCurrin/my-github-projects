@@ -86,7 +86,7 @@ $ make serve
 
 Open in the browser:
 
-- http://localhost:4000/my-github-projects/
+- http://localhost:4000/
 
 The Jekyll errors are not verbose, but this running with `--trace` command here.
 
