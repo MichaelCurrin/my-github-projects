@@ -11,6 +11,8 @@
     - [Install project dependencies](#install-project-dependencies)
     - [Setup access token](#setup-access-token)
 - [Run](#run)
+    - [Serve](#serve)
+    - [Debug](#debug)
 
 
 ## Reuse
@@ -64,12 +66,12 @@ Note that this does **not build** even with secret set, perhaps because it is no
 
 Follow this [guide](https://github.com/MichaelCurrin/static-sites-generator-resources/blob/master/Jekyll/setup_and_run.md).
 
-- Install Ruby - at least version `2.4`.
-- Install Bundler as _user_ gem.
+- Install **Ruby** - at least version `2.4`.
+- Install **Bundler** as _user_ gem.
 
 ### Install project dependencies
 
-This will use _Bundler_ to install gems at a project scope in the `vendor/gems` directory.
+Install **local gems**. This command will use _Bundler_ to install gems at project scope in the _vendor_ directory.
 
 ```sh
 $ make install
@@ -77,7 +79,7 @@ $ make install
 
 ### Setup access token
 
-Add your secret token value the repo's dotfile, which only needs one property in it
+Add your secret **access token** value to the repo's dotfile, which only needs one property in it
 
 Example:
 
@@ -87,6 +89,10 @@ echo 'GITHUB_TOKEN=abcdef' > .env
 
 ## Run
 
+### Serve
+
+Start the development server.
+
 ```sh
 $ make serve
 ```
@@ -95,7 +101,9 @@ Open in the browser:
 
 - http://localhost:4000/
 
-The Jekyll errors are not verbose, but this running with `--trace` command here.
+### Debug
+
+The Jekyll errors are not verbose, but this running with `--trace` command here. Note this will only build and not actually start the server.
 
 ```sh
 $ make debug
