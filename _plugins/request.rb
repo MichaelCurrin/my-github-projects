@@ -11,7 +11,7 @@ require 'faraday'
 
 module Request
   API_URL = 'https://api.github.com/graphql'
-  TOKEN = ENV['ACCESS_TOKEN']
+  TOKEN = ENV['GITHUB_TOKEN']
   HEADERS = {
     'Authorization': "token #{TOKEN}",
     'Content-Type': "application/json",
