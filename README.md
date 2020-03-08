@@ -1,5 +1,5 @@
 # My Github Projects
-> Dev portfolio static site showing a user's Github repos grouped by topic.
+> Dev portfolio static site showing a user's Github repos grouped by topic
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/43e6a441-a21b-4672-84be-e182a337e4cc/deploy-status)](https://app.netlify.com/sites/michael-currin/deploys)
 [![Made with Jekyll](https://img.shields.io/badge/Made%20with-Jekyll-blue.svg)](https://jekyllrb.com)
@@ -60,7 +60,9 @@ This _My Github Projects_ repo goes a step further by getting repos and their to
 
 This project uses Jekyll 4 - see [Upgrading Jekyll](https://jekyllrb.com/docs/upgrading/3-to-4/).
 
-## Reuse
+## Setup and run
+
+### Reuse
 
 If you want to setup your own dev portfolio project like this:
 
@@ -72,7 +74,7 @@ You do not need to reconfigure any profile username detail to use this repo.
 
 The only API configuration is a secret access token. If you create one for your own account, then the GraphQL query will return data for your own account, as the current authenticated user.
 
-## Create a token
+### Create a token
 
 This project relies on setting a Github API access token either in the terminal or as a secret in Github Pages or Netlify. This token is then sent to Github API on the POST request data.
 
@@ -84,7 +86,7 @@ To set this up:
     - This will be used in the remote and local build steps.
     - The value will not be visible after you leave this screen, however, you can always regenerate the token value.
 
-## Remote setup
+### Remote setup
 
 Netlify:
 
@@ -102,9 +104,9 @@ Note that this does not build even with secret set, perhaps because it is not en
 3. Enable Github Pages on `master` branch.
 4. Open the URL.
 
-## Local
+### Local
 
-### Install
+#### Install
 
 Install Ruby >= 2.4.
 
@@ -124,7 +126,7 @@ Example:
 echo 'GITHUB_TOKEN=abcdef' > .env
 ```
 
-### Run
+#### Run
 
 ```sh
 $ make serve
