@@ -1,5 +1,5 @@
 require_relative 'request'
-
+DEBUG = ENV['DEBUG']
 
 module GithubData
 	def self.get_gh_data
@@ -11,7 +11,9 @@ module GithubData
 		topics = Hash.new { |hash, key| hash[key] = {} }
 
 		for fetched_repo in fetched_repos do
-			# puts "FETCHED #{fetched_repo["name"]}"
+			if DEBUG
+				puts "FETCHED #{fetched_repo["name"]}"
+      end
 
 			repo_topics = fetched_repo["repositoryTopics"]["nodes"]
 			# TODO Use other attributes. For now just repo name.
@@ -28,7 +30,9 @@ module GithubData
 			repos[repo['name']] = repo
 
 			for topic in topics_of_fetched_repo do
-				# puts "  TOPIC #{topic}"
+			  if DEBUG
+				  puts "  TOPIC #{topic}"
+        end
 
 				stored_topics = topics[topic]
 				stored_topics[repo["name"]] = repo
