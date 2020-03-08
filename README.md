@@ -15,7 +15,7 @@
 - Ruby >= 2.4
 - Bundler
 
-This project used Jekyll 4 - see [Upgrading Jekyll](https://jekyllrb.com/docs/upgrading/3-to-4/).
+This project uses Jekyll 4 - see [Upgrading Jekyll](https://jekyllrb.com/docs/upgrading/3-to-4/).
 
 ## Reuse
 
@@ -67,6 +67,10 @@ $ make install
 $ make serve
 ```
 
+Open in the browser:
+
+- http://localhost:4000/my-github-projects/
+
 The Jekyll errors are not verbose, but this running with `--trace` command here.
 
 ```sh
@@ -75,7 +79,16 @@ $ make debug
 
 ## Development
 
-### Notes
+### Reloading
+
+At build time:
+
+- Github metadata - A request is done to Github API through the Jekyll Github Metadata plugin, which adds `site.github` to the templating namespace. This includes details about the owner, the current repo (based on the remote origin if local) and public repos.
+- GraphQL request - A request is done to Github GraphQL API using this project's custom plugin.
+
+When saving changes to the repo, the server will restart. The Github metadata will not be fetched again but any changes to changes to templating will be applied. The GraphQL request will also be done - investigation could be done to avoid this happening.
+
+### Running scripts
 
 The ruby script cannot be run directly, only through Jekyll. This seems to be a bug in one of the gems.
 
