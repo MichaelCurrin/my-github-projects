@@ -1,13 +1,15 @@
 # My Github Projects
-> Portfolio of projects, built as a static site that groups Github repos by topic labels
+> Dev portfolio static site showing a user's Github repos grouped by topic.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/43e6a441-a21b-4672-84be-e182a337e4cc/deploy-status)](https://app.netlify.com/sites/michael-currin/deploys)
 [![Made with Jekyll](https://img.shields.io/badge/Made%20with-Jekyll-blue.svg)](https://jekyllrb.com)
 [![Made with Ruby](https://img.shields.io/badge/Made%20with-Ruby-blue.svg)](https://www.ruby-lang.org)
 [![Made with Github GQL](https://img.shields.io/badge/Made%20with-Github%20GraphQL-blue.svg)](https://developer.github.com/v4/)
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/my-github-projects.svg)](https://GitHub.com/MichaelCurrin/my-github-projects/tags/)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/my-github-projects/blob/master/LICENSE)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
 
+- [Purpose](#purpose)
+- [Background](#background)
 - [Requirements](#requirements)
 - [Reuse](#reuse)
 - [Create a token](#create-a-token)
@@ -20,6 +22,34 @@
     - [Reloading](#reloading)
     - [Running scripts](#running-scripts)
     - [Github pages use](#github-pages-use)
+- [Future development](#future-development)
+- [License](#license)
+
+This project will show your Github account's public repos as a statically generated Jekyll site, both locally or on a remote location such as on Netlify.
+
+The main limitation that it has rebuilt in order to get the latest repos and topic tags though, but it is easy enough to trigger a new build by hand occasionally on Netlify. And also this project works best when you have a lot of repos (over 10) and also use detailed but consistent tags based on the use (tool / linter / static site) or tech used (programming language / library / host location).
+
+## Purpose
+
+This project is setup to show repo data for the **current authenticated user** (i.e. not other users).
+
+When setup as a website of your own repos and their topics, this project can be used for the following:
+
+- Quick reference to **find your own repos** by name and check their stats. With future development, you can find most recent, most starred, etc.
+- Group your repos by **topic**.
+    - This is is very useful as a portfolio for **job interviews**, since someone can for example see how many Machine Learning, Python and static site projects you have. They can see at a glance what **activity** there is (last updated, how many stars) and optionally click through to see the actual repo.
+    - This project is useful for maintaining or searching projects **for yourself**. For example if you want to find all your projects which are hosted on Github Pages or Netlify (assuming they are well-labelled). Or all the templates projects.
+    - If you want to teach someone about a language or tool and what to show them what you've made, you can guide them to certain topics.
+- This project gives you freedom to change the **styling** if you want to present the data in a different way.
+- After future development, you can highlight repos or topics to **guide visitors to**, or help you get to your most important or frequently accesses areas first.
+
+If you want to explore your _private_ repos only, change the `prviacy` value in the GraphQL query from `PUBLIC` to `PRIVATE`. Though you might want to just build that locally to avoid sharing that data.
+
+## Background
+
+This project was inspired by the listing of repository cards shown through [github/personal-website](https://github.com/github/personal-website) repo. That shows data for a couple of repos, using the Jekyll Github Metadata plugin and Github REST API internally. The public repos output from the plugin covers repos in detail, but there is not topic data and the language labels are limited (they are inferred and they do not reflect the purpose or tooling of a project).
+
+This _My Github Projects_ repo goes a step further by getting repos and their topics, then grouping them by their topics (labels set for a Github repo). This was made possible by create a plugin (in Ruby) and for efficiency this was done using the Github GraphQL API (such that one request returns 100 repos and their labels at once).
 
 ## Requirements
 
@@ -112,6 +142,8 @@ $ make debug
 
 ## Development
 
+Notes for developing this project.
+
 ### Access token
 
 It could be possible to mark the token as optional and return empty data in the custom plugin, but this causes issues in other parts which except a structure.
@@ -164,3 +196,17 @@ plugins:
  - faraday
  - jekyll-github-metadata
 ```
+
+## Future development
+
+- Adding sorting of own repos by various fields.
+- Add section to focus on chosen repos as a showcase.
+- Add section to focus on chosen topics.
+- Add images for topics.
+- Show favorited repos, alone or by topic.
+
+## License
+
+See [LICENSE](/LICENSE).
+
+Feel free to use this project for your own portfolio but please give credit in the repo and the website itself to this repo.
