@@ -1,0 +1,33 @@
+# Public repos owned by the current user along with metadata including topics.
+query ReposWithTopics {
+    viewer {
+        login
+        repositories(first: 100, ownerAffiliations: OWNER, privacy: PUBLIC, orderBy: { field: NAME, direction: ASC }) {
+            nodes {
+                name
+                # Dates
+                createdAt
+                updatedAt
+                pushedAt
+                # Counts
+                stargazers {
+                    totalCount
+                }
+                forkCount
+                # Topic labels.
+                repositoryTopics(first: 100) {
+                    nodes {
+                        topic {
+                            name
+                            stargazers {
+                                totalCount
+                            }
+                            viewerHasStarred
+                        }
+                        url
+                    }
+                }
+            }
+        }
+    }
+}
