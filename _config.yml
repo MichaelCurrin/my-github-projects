@@ -19,6 +19,7 @@ defaults:
       layout: "default"
 
 exclude:
+  - docs/
   - vendor/
   - LICENSE
   - README.md
