@@ -2,6 +2,7 @@ require_relative 'process'
 
 module GithubGQL
   class Generator < Jekyll::Generator
+    safe: true
 
     def generate(site)
       repos, topics = GithubData.get_gh_data
