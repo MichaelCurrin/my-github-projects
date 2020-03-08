@@ -4,23 +4,25 @@
 #
 # self was used in the module as per this page.
 #   https://stackoverflow.com/questions/322470/can-i-invoke-an-instance-method-on-a-ruby-module-without-including-it
+#
+# TODO: This could be rewritten without self or could be made into a class.
 require 'json'
 require 'faraday'
 
 module Request
   API_URL = 'https://api.github.com/graphql'
-
   TOKEN = ENV['ACCESS_TOKEN']
-  unless TOKEN
-    raise 'Env variable ACCESS_TOKEN must be set'
-  end
   HEADERS = {
     'Authorization': "token #{TOKEN}",
     'Content-Type': "application/json",
   }
 
-  QUERY_PATH = File.join File.dirname(__FILE__), 'repos_with_topics.gql'
-  QUERY = File.open(QUERY_PATH).read
+  def self.prepare_request(query_filename)
+    query_path = File.join File.dirname(__FILE__), query_filename
+    query_contents = File.open(query_path).read
+
+    {'query': query_contents}
+  end
 
   def self.post(url, payload)
     puts "Do POST request"
@@ -40,7 +42,12 @@ module Request
   end
 
   def self.query()
-    query_payload = {'query': QUERY}
+    unless TOKEN
+      raise 'Env variable ACCESS_TOKEN must be set'
+    end
+
+    query_filename = 'repos_with_topics.gql'
+    query_payload = self.prepare_request(query_filename)
     results = post API_URL, query_payload
 
     errors = results['errors']
