@@ -43,7 +43,7 @@ module Request
 
   def self.query()
     unless TOKEN
-      raise 'Env variable ACCESS_TOKEN must be set'
+      raise 'Env variable GITHUB_TOKEN must be set'
     end
 
     query_filename = 'repos_with_topics.gql'

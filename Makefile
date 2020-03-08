@@ -1,4 +1,4 @@
-export ACCESS_TOKEN=''
+export GITHUB_TOKEN=''
 
 
 help:

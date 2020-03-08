@@ -70,6 +70,14 @@ Install project dependencies.
 $ make install
 ```
 
+Add your secret token value the repo's dotfile, which only needs one property in it
+
+Example:
+
+```sh
+echo 'GITHUB_TOKEN=abcdef' > .env
+```
+
 ### Run
 
 ```sh
