@@ -47,9 +47,22 @@ To set this up:
 
 1. Go to the [Personal access tokens](https://github.com/settings/tokens) page of your Github account. Or go through Settings then Developer Settings.
 2. Create a token, with read access to your own repos.
-3. Copy token value. This will not be visible after you leave this screen, however, you can always regenerate the token value.
+3. Copy the token value.
+    - This will be used in the remote and local build steps.
+    - The value will not be visible after you leave this screen, however, you can always regenerate the token value.
 
 ## Remote setup
+
+Netlify:
+
+1. Ensure you have the repo or a fork in your Github account.
+2. Add the site to Netlify.
+3. Update build command.
+4. Open the URL.
+
+Github Pages:
+
+Note that this does not build even with secret set, perhaps because it is not enabled on action or because the plugin is not considered safe.
 
 1. Ensure you have this repo or a fork in your Github account repos as a public rep.
 2. Edit repo Settings.
@@ -96,6 +109,12 @@ $ make debug
 
 ## Development
 
+### Access token
+
+It could be possible to mark the token as optional and return empty data in the custom plugin, but this causes issues in other parts which except a structure.
+
+One way to reduce build time is to comment out the Jekyll Github Metadata Plugin from the gem file or to set the number of repos in the GQL query file to a low number.
+
 ### Reloading
 
 At build time:
@@ -121,4 +140,24 @@ This does not help:
 
 ```sh
 $ gem 'eventmachine', '1.2.7'
+```
+
+### Github pages use
+
+These might be needed or not help:
+
+In plugin:
+
+```ruby
+    safe = true
+```
+
+If may not work at all still because of how Github Pages works.
+
+Config:
+
+```yaml
+plugins:
+ - faraday
+ - jekyll-github-metadata
 ```
