@@ -7,6 +7,16 @@
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/my-github-projects.svg)](https://GitHub.com/MichaelCurrin/my-github-projects/tags/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/my-github-projects/blob/master/LICENSE)
 
+- [Requirements](#requirements)
+- [Reuse](#reuse)
+- [Create a token](#create-a-token)
+- [Remote setup](#remote-setup)
+- [Local](#local)
+    - [Install](#install)
+    - [Run](#run)
+- [Development](#development)
+    - [Reloading](#reloading)
+    - [Running scripts](#running-scripts)
 
 ## Requirements
 
@@ -35,10 +45,9 @@ This project relies on setting a Github API access token either in the terminal 
 
 To set this up:
 
-1. Go to Github Settings
-2. Go to Developer tokens section.
-3. Create a token with read access to your own repos.
-4. Copy token value. This will not be visible after you leave this screen, however, you can always regenerate the token value.
+1. Go to the [Personal access tokens](https://github.com/settings/tokens) page of your Github account. Or go through Settings then Developer Settings.
+2. Create a token, with read access to your own repos.
+3. Copy token value. This will not be visible after you leave this screen, however, you can always regenerate the token value.
 
 ## Remote setup
 
