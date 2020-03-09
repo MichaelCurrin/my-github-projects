@@ -1,0 +1,31 @@
+/* This is not ideal as it does not replace the existing rule, but it does add at the bottom of main.css. Maybe override in utilities/derived-variables. */
+
+html {
+  background-color: #333;
+}
+
+body {
+  height: 100%;
+  color: white;
+}
+
+// Sticky header.
+nav.navbar {
+  top: 0;
+  width: 100%;
+  position: fixed;
+}
+
+section.section {
+  margin-top: 100px;
+}
+
+// TODO: all levels
+.content h2 {
+  color: white;
+}
+
+// TODO: Move to bottom of the page.
+footer {
+  height: 60px;
+}
