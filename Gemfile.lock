@@ -31,6 +31,8 @@ GEM
       rouge (~> 3.0)
       safe_yaml (~> 1.0)
       terminal-table (~> 1.8)
+    jekyll-bulma (0.8.1)
+      jekyll (~> 4.0)
     jekyll-github-metadata (2.13.0)
       jekyll (>= 3.4, < 5.0)
       octokit (~> 4.0, != 4.4.0)
@@ -73,6 +75,7 @@ PLATFORMS
 DEPENDENCIES
   faraday
   jekyll (~> 4.0.0)
+  jekyll-bulma
   jekyll-github-metadata
 
 BUNDLED WITH
