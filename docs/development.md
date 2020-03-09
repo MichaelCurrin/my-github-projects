@@ -13,6 +13,13 @@ It could be possible to mark the token as optional and return empty data in the 
 
 One way to reduce build time is to comment out the Jekyll Github Metadata Plugin from the gem file or to set the number of repos in the GQL query file to a low number.
 
+## Styling
+
+[Bulma](https://bulma.io/) is used for CSS styling.
+
+The [jekyll-octopod/jekyll-bulma](https://github.com/jekyll-octopod/jekyll-bulma) gem is used to make this easier if the Bulma version needs to be locked.
+
+
 ## Reloading
 
 At build time:
