@@ -4,6 +4,8 @@ url: https://michael-currin.netlify.com/
 # Built-in for Github Pages but needed on Netlify.
 repository: MichaelCurrin/my-github-projects
 
+theme: jekyll-bulma
+
 collections:
   topics:
     output: true
