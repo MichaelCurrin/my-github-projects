@@ -6,19 +6,13 @@ repository: MichaelCurrin/my-github-projects
 
 theme: jekyll-bulma
 
+header_pages:
+  - all_repos.md
+  - all_topics.md
+
 collections:
   topics:
     output: true
-
-defaults:
-  - scope:
-      path: "_topics/*"
-    values:
-      layout: "topic"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
 
 exclude:
   - docs/
