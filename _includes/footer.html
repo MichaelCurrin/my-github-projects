@@ -1,0 +1,33 @@
+{%- comment -%} From theme's footer.html {%- endcomment -%}
+<footer class="footer">
+    <div class="columns">
+        <div class="column">
+            <h1 class="title is-size-4">Github repo</h1>
+            <a
+                href="{{ site.github.owner_url }}/{{ site.github.project_title }}">{{ site.github.owner_name }}/{{ site.github.project_title }}</a>
+        </div>
+
+        <div class="column">
+            <h1 class="title title is-size-4">Built with</h1>
+            <a href="https://jekyllrb.com">Jekyll</a>
+        </div>
+
+        <div class="column">
+            <h1 class="title title is-size-4">Social media</h1>
+            <ul>
+                <li>
+                    <span class="icon">
+                        <i class="fab fa-twitter"></i>
+                    </span>
+                    <a href="https://twitter.com/{{ site.twitter_handle }}">@{{ site.twitter_handle }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+{%- if page.custom_js -%}
+{%- for js_file in page.custom_js -%}
+<script src='{{ site.url }}/js/{{ js_file }}.js' type="text/javascript"></script>
+{%- endfor -%}
+{%- endif -%}
