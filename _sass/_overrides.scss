@@ -25,7 +25,11 @@ section.section {
   color: white;
 }
 
-// TODO: Move to bottom of the page.
+// Move to bottom of the page.
 footer {
-  height: 60px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1.5rem;
+}
 }
