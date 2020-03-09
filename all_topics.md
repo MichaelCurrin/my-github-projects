@@ -10,7 +10,7 @@ layout: page
         <a href="#topic-{{ topic[0] }}"><h2 id="topic-{{ topic[0] }}">&#35;{{ topic[0] }}</h2></a>
 
         {% assign repos = topic[1] %}
-        <div class="columns is-multiline is-mobile">
+        <div class="columns is-multiline">
             {% for repo_data in repos %}
                 {% assign repo = repo_data[1] %}
                 <div class="column is-3-widescreen is-4-desktop is-6-tablet is-8-mobile">
