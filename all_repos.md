@@ -6,7 +6,7 @@ layout: page
 <div id="repos" class="columns is-multiline is-mobile">
 {% for repo_data in site.data.all_repos %}
     {% assign repo = repo_data[1] %}
-    <div class="column is-3">
+    <div class="column is-3-widescreen is-4-desktop is-6-tablet is-8-mobile">
         {% include repo_card.html %}
     </div>
 {% endfor %}
