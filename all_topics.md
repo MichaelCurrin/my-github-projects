@@ -7,7 +7,7 @@ layout: page
 <div id='repo-topics'>
 {% for topic in sorted_topics %}
     <div>
-        <a href="#{{ topic[0] }}"><h2 id="{{ topic[0] }}">&#35;{{ topic[0] }}</h2></a>
+        <a href="#topic-{{ topic[0] }}"><h2 id="topic-{{ topic[0] }}">&#35;{{ topic[0] }}</h2></a>
 
         {% assign repos = topic[1] %}
         <div class="columns is-multiline is-mobile">
