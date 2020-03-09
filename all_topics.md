@@ -4,13 +4,6 @@ layout: page
 ---
 
 {% assign sorted_topics = site.data.all_topics | sort %}
-{%- comment -%}
-TODO background color.
-header.
-heading.
-update instructions and bulma notes
-background color of html to #333. See plugin docs
-{%- endcomment -%}
 <div id='repo-topics'>
 {% for topic in sorted_topics %}
     <div>
