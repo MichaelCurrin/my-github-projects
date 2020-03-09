@@ -13,6 +13,11 @@ My public repos, sorted by name. Using Github metadata plugin.
 
 Using GQL:
 
-{% for repo in site.data.all_repos %}
-- {{ repo }}
+<div id="repos" class="columns is-multiline is-mobile">
+{% for repo_data in site.data.all_repos %}
+    {% assign repo = repo_data[1] %}
+    <div class="column is-3">
+        {% include repo_card.html %}
+    </div>
 {% endfor %}
+</div>

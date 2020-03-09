@@ -4,17 +4,29 @@ layout: page
 ---
 
 {% assign sorted_topics = site.data.all_topics | sort %}
-
+{%- comment -%}
+TODO background color.
+header.
+heading.
+update instructions and bulma notes
+background color of html to #333. See plugin docs
+{%- endcomment -%}
+<div id='repo-topics'>
 {% for topic in sorted_topics %}
-### {{ topic[0] }}
+    <div>
+        <a href="#{{ topic[0] }}"><h2 id="{{ topic[0] }}">&#35;{{ topic[0] }}</h2></a>
 
-{% assign repos = topic[1] %}
-{% for repo in repos %}
-- [{{ repo[0] }}]({{ repo[1].url }})
-    * Description: {{ repo[1].description }}
-    * Stars: {{ repo[1].stars }}
-    * Forks: {{ repo[1].forks }}
-    * Updated: {{ repo[1].updated_at | date_to_string }}
-    * Created: {{ repo[1].created_at | date_to_string }}
-{% endfor -%}
+        {% assign repos = topic[1] %}
+        <div class="columns is-multiline is-mobile">
+            {% for repo_data in repos %}
+                {% assign repo = repo_data[1] %}
+                <div class="column is-one-third">
+                    {% include repo_card.html %}
+                </div>
+            {% endfor -%}
+        </div>
+
+        <br>
+    </div>
 {% endfor %}
+</div>
