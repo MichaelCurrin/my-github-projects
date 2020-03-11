@@ -4,17 +4,22 @@ layout: page
 ---
 
 {% assign sorted_topics = site.data.all_topics | sort %}
-
+<div id='repo-topics'>
 {% for topic in sorted_topics %}
-### {{ topic[0] }}
+    <div>
+        <a href="#topic-{{ topic[0] }}"><h2 id="topic-{{ topic[0] }}">&#35;{{ topic[0] }}</h2></a>
 
-{% assign repos = topic[1] %}
-{% for repo in repos %}
-- [{{ repo[0] }}]({{ repo[1].url }})
-    * Description: {{ repo[1].description }}
-    * Stars: {{ repo[1].stars }}
-    * Forks: {{ repo[1].forks }}
-    * Updated: {{ repo[1].updated_at | date_to_string }}
-    * Created: {{ repo[1].created_at | date_to_string }}
-{% endfor -%}
+        {% assign repos = topic[1] %}
+        <div class="columns is-multiline">
+            {% for repo_data in repos %}
+                {% assign repo = repo_data[1] %}
+                <div class="column is-3-widescreen is-4-desktop is-6-tablet is-8-mobile">
+                    {% include repo_card.html %}
+                </div>
+            {% endfor -%}
+        </div>
+
+        <br>
+    </div>
 {% endfor %}
+</div>

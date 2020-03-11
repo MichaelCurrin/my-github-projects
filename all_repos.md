@@ -3,16 +3,11 @@ title: All repos
 layout: page
 ---
 
-My public repos, sorted by name. Using Github metadata plugin.
-
-{% assign repos = site.github.public_repositories | filter: 'fork', false %}
-{% for repo in repos %}
-- {{ repo.owner.login }}/{{ repo.name }}
-    > {{ repo.description }}
+<div id="repos" class="columns is-multiline">
+{% for repo_data in site.data.all_repos %}
+    {% assign repo = repo_data[1] %}
+    <div class="column is-3-widescreen is-4-desktop is-6-tablet is-8-mobile">
+        {% include repo_card.html %}
+    </div>
 {% endfor %}
-
-Using GQL:
-
-{% for repo in site.data.all_repos %}
-- {{ repo }}
-{% endfor %}
+</div>

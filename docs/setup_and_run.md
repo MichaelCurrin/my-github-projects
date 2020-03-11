@@ -108,3 +108,9 @@ The Jekyll errors are not verbose, but this running with `--trace` command here.
 ```sh
 $ make debug
 ```
+
+If you want to disable fetching of GraphQL data, use this as a prefix before a command:
+
+```sh
+$ DISABLE_GQL=1 command
+```
