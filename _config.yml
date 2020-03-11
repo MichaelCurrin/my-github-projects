@@ -10,6 +10,7 @@ theme: jekyll-bulma
 header_pages:
   - all_repos.md
   - all_topics.md
+  - about.md
 
 collections:
   topics:
