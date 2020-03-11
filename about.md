@@ -25,7 +25,7 @@ This project a static website hosted on [Netlify](netlify.com) for free and uses
 
 On build, a request is done to Github GraphQL API to get repos and their topic labels. For the All Topics page, the structure is inverted such that topics contain repos.
 
-You can fork and reuse this project to make a site showing your own Github repos. Follow the repo's README.
+You can fork and reuse this project to make a site showing your own Github repos. Follow the repo's [README](https://github.com/MichaelCurrin/my-github-projects/blob/master/README.md).
 
 ## Background
 
