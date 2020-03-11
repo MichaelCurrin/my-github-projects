@@ -13,3 +13,5 @@ Github repo: [{{ site.github.owner_name }}/{{ site.github.project_title }}]({{ s
 ### How it works
 
 On build, a request is done to Github GraphQL API to get repos and their topic labels. For the All Topics page, the structure is inverted such that topics contain repos.
+
+You can fork and reuse this project to make a site showing your own Github repos. Follow the repo's README.
