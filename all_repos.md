@@ -3,6 +3,8 @@ title: All repos
 layout: page
 ---
 
+This page shows all public Github repos owned by me.
+
 <div id="repos" class="columns is-multiline">
 {% for repo_data in site.data.all_repos %}
     {% assign repo = repo_data[1] %}
