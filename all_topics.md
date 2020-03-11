@@ -3,6 +3,8 @@ title: All Topics
 layout: page
 ---
 
+This page shows all my Github repos, grouped by the topics I've assigned to them.
+
 {% assign sorted_topics = site.data.all_topics | sort %}
 <div id='repo-topics'>
 {% for topic in sorted_topics %}
