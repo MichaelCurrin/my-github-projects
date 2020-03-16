@@ -25,7 +25,9 @@ The main limitation that it has rebuilt in order to get the latest repos and top
 
 This project is setup to show repo data for the **current authenticated user** (i.e. not other users).
 
-When setup as a website of your own repos and their topics, this project can be used for the following:
+You can fork this project and setup as a Netlify static site which shows your **own** repos and their topic labels. 
+
+When setup as a website, this project can serve the following purposes for the owner:
 
 - Quick reference to **find your own repos** by name and check their stats. With future development, you can find most recent, most starred, etc.
 - Group your repos by **topic**.
@@ -33,9 +35,9 @@ When setup as a website of your own repos and their topics, this project can be 
     - This project is useful for maintaining or searching projects **for yourself**. For example if you want to find all your projects which are hosted on Github Pages or Netlify (assuming they are well-labelled). Or all the templates projects.
     - If you want to teach someone about a language or tool and what to show them what you've made, you can guide them to certain topics.
 - This project gives you freedom to change the **styling** if you want to present the data in a different way.
-- After future development, you can highlight repos or topics to **guide visitors to**, or help you get to your most important or frequently accesses areas first.
+- After future development, you can highlight repos or topics to **guide visitors towards**, or help you get to your most important or frequently accesses areas first.
 
-If you want to explore your _private_ repos only, change the `prviacy` value in the GraphQL query from `PUBLIC` to `PRIVATE`. Though you might want to just build that locally to avoid sharing that data.
+If you want to explore your _private_ repos only, change the `privacy` value in the GraphQL query from `PUBLIC` to `PRIVATE`. Though you might want to just build that locally to avoid sharing that data.
 
 ## Background
 
@@ -45,12 +47,15 @@ This _My Github Projects_ repo goes a step further by getting repos and their to
 
 ## Requirements
 
-- Github account
-- Github API dev token
-- Ruby >= 2.4
-- Bundler
+Name | Description
+---  | ---
+Github account | Your repos stored there will be referenced.
+[Github dev token](https://github.com/settings/tokens) | For V4 GraphQL API requests.
+[Netlify](https://netlify.com) account | If you want to setup the site remotely and not just locally.
+[Ruby](https://www.ruby-lang.org/en/) >= 2.4 | For the custom Jekyll plugins in [\_plugins](/_plugins) directory, including querying the Github API.
+[Bundler](https://bundler.io/) | Used to install project-scoped gems from [Gemfile](/Gemfile).
 
-This project uses Jekyll 4 - see [Upgrading Jekyll](https://jekyllrb.com/docs/upgrading/3-to-4/).
+The project gems include _Jekyll 4_, which is therefore not needed globally. For understanding differences between version 3 and 4, see [Upgrading Jekyll 3-to-4](https://jekyllrb.com/docs/upgrading/3-to-4/) on the _Jekyll_ website.
 
 ## Setup and run
 
