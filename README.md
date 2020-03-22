@@ -6,6 +6,7 @@
 [![Jekyll theme](https://img.shields.io/badge/Theme-jekyll%2D-bulma-blue.svg)](https://github.com/jekyll-octopod/jekyll-bulma)
 [![Made with Ruby](https://img.shields.io/badge/Made%20with-Ruby-blue.svg)](https://www.ruby-lang.org)
 [![Made with Github GQL](https://img.shields.io/badge/Made%20with-Github%20GraphQL-blue.svg)](https://developer.github.com/v4/)
+[![Made with Github GQL](https://img.shields.io/badge/Made%20with-List.js-blue.svg)](https://listjs.com/)
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/my-github-projects.svg)](https://GitHub.com/MichaelCurrin/my-github-projects/tags/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
 
@@ -25,7 +26,7 @@ The main limitation that it has rebuilt in order to get the latest repos and top
 
 This project is setup to show repo data for the **current authenticated user** (i.e. not other users).
 
-You can fork this project and setup as a Netlify static site which shows your **own** repos and their topic labels. 
+You can fork this project and setup as a Netlify static site which shows your **own** repos and their topic labels.
 
 When setup as a website, this project can serve the following purposes for the owner:
 
@@ -47,13 +48,13 @@ This _My Github Projects_ repo goes a step further by getting repos and their to
 
 ## Requirements
 
-Name | Description
----  | ---
-Github account | Your repos stored there will be referenced.
-[Github dev token](https://github.com/settings/tokens) | For V4 GraphQL API requests.
-[Netlify](https://netlify.com) account | If you want to setup the site remotely and not just locally.
-[Ruby](https://www.ruby-lang.org/en/) >= 2.4 | For the custom Jekyll plugins in [\_plugins](/_plugins) directory, including querying the Github API.
-[Bundler](https://bundler.io/) | Used to install project-scoped gems from [Gemfile](/Gemfile).
+| Name                                                   | Description                                                                                           |
+| ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| Github account                                         | Your repos stored there will be referenced.                                                           |
+| [Github dev token](https://github.com/settings/tokens) | For V4 GraphQL API requests.                                                                          |
+| [Netlify](https://netlify.com) account                 | If you want to setup the site remotely and not just locally.                                          |
+| [Ruby](https://www.ruby-lang.org/en/) >= 2.4           | For the custom Jekyll plugins in [\_plugins](/_plugins) directory, including querying the Github API. |
+| [Bundler](https://bundler.io/)                         | Used to install project-scoped gems from [Gemfile](/Gemfile).                                         |
 
 The project gems include _Jekyll 4_, which is therefore not needed globally. For understanding differences between version 3 and 4, see [Upgrading Jekyll 3-to-4](https://jekyllrb.com/docs/upgrading/3-to-4/) on the _Jekyll_ website.
 
