@@ -1,4 +1,8 @@
 <head>
+  {% comment %}
+    Based on https://github.com/jekyll-octopod/jekyll-bulma/blob/master/_includes/head.html
+    Note that the site url and base url logic was replaced with relative or absolute filters.
+  {% endcomment %}
   <meta charset="utf-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1">
@@ -14,17 +18,17 @@
                    {{ site.description }}
                  {%- endif -%}">
 
-  <link href="{{ '/assets/fonts/ubuntu/ubuntu-v11-latin-ext_latin-regular.woff' | prepend:site.baseurl }}"
+  <link href="{{ '/assets/fonts/ubuntu/ubuntu-v11-latin-ext_latin-regular.woff' | relative_url }}"
         rel='stylesheet'
         type='text/css'>
   <link rel="stylesheet"
-        href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
+        href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="canonical"
-        href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+        href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate"
         type="application/rss+xml"
         title="{{ site.title }}"
-        href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
+        href="{{ '/feed.xml' | absolute_url }}">
 
-  <script src="{{ '/assets/js/dropdown.js' | prepend: site.baseurl | prepend: site.url }}"></script>
+  <script src="{{ '/assets/js/dropdown.js' | relative_url }}"></script>
 </head>
