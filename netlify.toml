@@ -1,0 +1,6 @@
+[build]
+  command = "make build-prod"
+  publish = "_site"
+
+[build.environment]
+  JEKYLL_ENV = "production"
