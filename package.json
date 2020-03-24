@@ -2,7 +2,6 @@
   "name": "my-github-projects",
   "version": "0.3.0",
   "description": "Dev portfolio static site showing a user's Github repos grouped by topic",
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MichaelCurrin/my-github-projects.git"
@@ -10,7 +9,6 @@
   "author": {
     "name": "Michael Currin"
   },
-
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/MichaelCurrin/my-github-projects/issues"
