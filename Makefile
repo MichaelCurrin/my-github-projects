@@ -27,7 +27,7 @@ install: install-gems install-js
 s serve:
 	source .env && bundle exec jekyll serve -l
 
-debug:
+build-dev: install-js
 	DEBUG=1 source .env && bundle exec jekyll build --trace
 
 
