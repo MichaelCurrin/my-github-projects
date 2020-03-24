@@ -45,3 +45,16 @@ footer.footer {
 footer i {
   color: #333;
 }
+
+
+/* For columns of cards, remove shadow mainly - override Bulma styling of `list` class, as this is used for ListJS. */
+.columns.list {
+    background-color: inherit;
+    border-radius: inherit;
+    box-shadow: inherit;
+}
+
+/* Allow search bar to have a reasonable size - override Bulma setting of 100%. */
+.search.input {
+    width: inherit;
+}
