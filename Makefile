@@ -32,4 +32,4 @@ build-dev: install-js
 
 
 build-prod:	install-js
-	jekyll build
+	jekyll build --trace
