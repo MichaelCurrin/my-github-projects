@@ -1,5 +1,6 @@
-# Make this avaiable in subprocesses after executing source command.
-export GITHUB_TOKEN=''
+# This makes the variable available in subprocesses, after executing source command.
+# But also make sure not to overwrite a value set already, such as with Netlify secrets.
+export GITHUB_TOKEN := $(if $(GITHUB_TOKEN), $(GITHUB_TOKEN), '')
 
 JS_DIR = assets/js
 
