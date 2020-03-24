@@ -18,9 +18,9 @@ collections:
 
 exclude:
   - docs/
-  - vendor/
   - LICENSE
   - README.md
-  - Gemfile
-  - Gemfile.lock
   - Makefile
+  - netlify.toml
+  - package.json
+  - package-lock.json
