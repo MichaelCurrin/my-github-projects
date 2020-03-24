@@ -29,3 +29,7 @@ s serve:
 
 debug:
 	DEBUG=1 source .env && bundle exec jekyll build --trace
+
+
+build-prod:	install-js
+	jekyll build
