@@ -18,7 +18,7 @@
 **API requests**
 
 [![Made with Ruby](https://img.shields.io/badge/Made%20with-Ruby-blue.svg)](https://www.ruby-lang.org)
-[![Used Github GraphQL API](https://img.shields.io/badge/Uses-Github%20GraphQL%20API-blue.svg)](https://developer.github.com/v4/)
+[![Queries Github GraphQL API](https://img.shields.io/badge/Queries-Github%20GraphQL%20API-blue.svg)](https://developer.github.com/v4/)
 
 
 - [Purpose](#purpose)
@@ -59,13 +59,14 @@ This _My Github Projects_ repo goes a step further by getting repos and their to
 
 ## Requirements
 
-| Name                                                   | Description                                                                                           |
-| ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
-| Github account                                         | Your repos stored there will be referenced.                                                           |
-| [Github dev token](https://github.com/settings/tokens) | For V4 GraphQL API requests.                                                                          |
-| [Netlify](https://netlify.com) account                 | If you want to setup the site remotely and not just locally.                                          |
-| [Ruby](https://www.ruby-lang.org/en/) >= 2.4           | For the custom Jekyll plugins in [\_plugins](/_plugins) directory, including querying the Github API. |
-| [Bundler](https://bundler.io/)                         | Used to install project-scoped gems from [Gemfile](/Gemfile).                                         |
+| Name                                                   | Purpose                                                                          |
+| ------------------------------------------------------ | -------------------------------------------------------------------------------- |
+| Github account                                         | Repos in this account will be reported on.                                       |
+| [Github dev token](https://github.com/settings/tokens) | For GraphQL API requests. Only read access to your public repos is needed.       |
+| [Netlify](https://netlify.com) account                 | Optionally setup the site remotely here.                                         |
+| [Ruby](https://www.ruby-lang.org/en/) >= 2.4           | Run the custom Jekyll [plugins](/_plugins) - includes a query to the Github API. |
+| [Bundler](https://bundler.io/)                         | Install project-scoped gems from [Gemfile](/Gemfile).                            |
+| [Node](https://nodejs.org/)                            | Install and run project-scoped Node packages from [package.json](/package.json). |
 
 The project gems include _Jekyll 4_, which is therefore not needed globally. For understanding differences between version 3 and 4, see [Upgrading Jekyll 3-to-4](https://jekyllrb.com/docs/upgrading/3-to-4/) on the _Jekyll_ website.
 
