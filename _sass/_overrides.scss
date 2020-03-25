@@ -1,4 +1,5 @@
-/* This is not ideal as it does not replace the existing rule, but it does add at the bottom of main.css. Maybe override in utilities/derived-variables. */
+/* This is not ideal as it does not replace the existing rule, but it does add at the bottom of main.css.
+   Maybe override in utilities/derived-variables. Or over variables before import is done, where color variables are used */
 
 html {
   background-color: #333;
@@ -10,6 +11,7 @@ body {
 }
 
 // Sticky header.
+// TODO: Replace with Bulma sticky header.
 nav.navbar {
   top: 0;
   width: 100%;
@@ -20,28 +22,28 @@ section.section {
   margin-top: 100px;
 }
 
-// TODO: all levels.
 .content h1 {
   color: white;
 }
-
 .content h2 {
   color: white;
 }
-
 .content h3 {
+  color: white;
+}
+.content h4 {
   color: white;
 }
 
 
-// Move to bottom of the page.
+// Keep at bottom of the page.
+// TODO Use Bulma approach, make it smaller and maybe not sticky.
 footer.footer {
   position: fixed;
   bottom: 0;
   width: 100%;
   padding: 2rem 1.5rem 2rem;
 }
-
 footer i {
   color: #333;
 }
