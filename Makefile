@@ -29,7 +29,7 @@ s serve:
 	source .env && bundle exec jekyll serve -l
 
 # Useful to preview the prod build and also log verbose messages and any errors.
-build-dev: install-js
+build-dev:
 	DEBUG=1 source .env && bundle exec jekyll build --trace
 
 
