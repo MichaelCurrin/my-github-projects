@@ -1,28 +1,48 @@
+require 'json'
 require_relative 'request'
 
 DEBUG = ENV['DEBUG']
 
+
+# From https://www.programming-idioms.org/idiom/173/format-a-number-with-grouped-thousands/2440/ruby
+def thousands_separator(value)
+  value.to_s.gsub(/\B(?=(...)*\b)/, ',')
+end
+
 module GithubData
 
-  def self.parse_repo(fetched_repo)
-    # We can't use symbols here as Jekyll can't use symbols.
-    # A class or struct was not practical so an ad hoc hash is used here.
-    repo = {}
-    repo['name'] = fetched_repo['name']
-    repo['url'] = fetched_repo['url']
-    repo['description'] = fetched_repo['description']
+  def self.parse_repo(repo)
+    if DEBUG == '2'
+      puts "REPO RAW DATA"
+      puts JSON.pretty_generate repo
+    end
 
-    repo['created_at'] = fetched_repo['createdAt']
-    repo['updated_at'] = fetched_repo['updatedAt']
+    # Handle edgecase of an empty repo.
+    branch = repo['defaultBranchRef']
+    if branch
+      total_commits = branch['commits']['history']['totalCount']
+    else
+      total_commits = 0
+    end
 
-    repo['stars'] = fetched_repo['stargazers']['totalCount']
-    repo['forks'] = fetched_repo['forkCount']
+    topics = repo['repositoryTopics']['nodes']
 
-    fetched_topics = fetched_repo['repositoryTopics']['nodes']
-    # List of topic names.
-    repo['topics'] = fetched_topics.map { |t| t['topic']['name'] }
+    # We can't use symbols here as Jekyll can't handle symbols.
+    # A class or struct was not practical so hash is used here.
+    {
+      'name' => repo['name'],
+      'url' => repo['url'],
+      'description' => repo['description'],
 
-    repo
+      'created_at' => repo['createdAt'],
+      'updated_at' => repo['updatedAt'],
+
+      'stars' => repo['stargazers']['totalCount'],
+      'forks' => repo['forkCount'],
+      'total_commits' => total_commits,
+
+      'topics' => topics.map { |t| t['topic']['name'] },
+    }
   end
 
   def self.process_repos(fetched_repos)
