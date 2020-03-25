@@ -16,7 +16,16 @@ query ReposWithTopics {
                     totalCount
                 }
                 forkCount
-                # Topic labels.
+                defaultBranchRef {
+                    commits: target {
+                        ... on Commit {
+                            history(first: 1) {
+                                totalCount
+                            }
+                        }
+                    }
+                }
+                # Topic labels
                 repositoryTopics(first: 100) {
                     nodes {
                         topic {
