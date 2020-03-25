@@ -16,6 +16,7 @@
         <div class="content">
             <p>{{ repo.description }}</p>
             <p>
+                Commits: {{ repo.total_commits | thousands_separated }}<br>
                 Updated: {{ repo.updated_at | date_to_string }} <br>
                 Created: {{ repo.created_at | date_to_string }}
             </p>
