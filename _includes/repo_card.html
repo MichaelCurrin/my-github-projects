@@ -7,8 +7,16 @@
             <div class="media-content">
                 <p class="title is-4 list-name" data-name="{{ repo.name }}"><a href="{{ repo.url }}">{{ repo.name }}</a></p>
                 <p class="subtitle is-6">
-                    {% if repo.stars != 0 %}<i class="fas fa-star"></i> {{ repo.stars }}{% endif %}
-                    {% if repo.forks != 0 %}<i class="fas fa-code-branch"></i> {{ repo.forks }}{% endif %}
+                    {% if repo.stars != 0 %}
+                        <a href="{{ repo.url }}/stargazers">
+                            <i class="fas fa-star"></i> {{ repo.stars }}
+                        </a>
+                    {% endif %}
+                    {% if repo.forks != 0 %}
+                        <a href="{{ repo.url }}/network/members">
+                            <i class="fas fa-code-branch"></i> {{ repo.forks }}
+                        </a>
+                    {% endif %}
                 </p>
             </div>
         </div>
