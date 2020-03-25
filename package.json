@@ -1,6 +1,5 @@
 {
   "name": "my-github-projects",
-  "version": "0.3.0",
   "description": "Dev portfolio static site showing a user's Github repos grouped by topic",
   "repository": {
     "type": "git",
