@@ -6,13 +6,21 @@ Notes for developing this project.
 - [Styling](#styling)
 - [Reloading](#reloading)
 - [Running scripts](#running-scripts)
-- [Github pages use](#github-pages-use)
+
 
 ## Access token
 
 It could be possible to mark the token as optional and return empty data in the custom plugin, but this causes issues in other parts which except a structure.
 
 One way to reduce build time is to comment out the Jekyll Github Metadata Plugin from the gem file or to set the number of repos in the GQL query file to a low number.
+
+Testing the token:
+
+```sh
+make check-env
+
+GITHUB_TOKEN=abc make check-env
+```
 
 ## Styling
 
@@ -22,7 +30,7 @@ Bulma links:
 
 - [Form controls](https://bulma.io/documentation/form/general/)
 - [Panel](https://bulma.io/documentation/components/panel/) doc - for search bar.
-  
+
 
 ## Reloading
 
@@ -32,6 +40,7 @@ At build time:
 - GraphQL request - A request is done to Github GraphQL API using this project's custom plugin.
 
 When saving changes to the repo, the server will restart. The Github metadata will not be fetched again but any changes to changes to templating will be applied. The GraphQL request will also be done - investigation could be done to avoid this happening.
+
 
 ## Running scripts
 
@@ -49,24 +58,4 @@ This does not help:
 
 ```ruby
 gem 'eventmachine', '1.2.7'
-```
-
-## Github pages use
-
-These might be needed or not help:
-
-In plugin:
-
-```ruby
-    safe = true
-```
-
-If may not work at all still because of how Github Pages works.
-
-Config:
-
-```yaml
-plugins:
- - faraday
- - jekyll-github-metadata
 ```

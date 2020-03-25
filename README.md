@@ -70,13 +70,38 @@ This _My Github Projects_ repo goes a step further by getting repos and their to
 
 The project gems include _Jekyll 4_, which is therefore not needed globally. For understanding differences between version 3 and 4, see [Upgrading Jekyll 3-to-4](https://jekyllrb.com/docs/upgrading/3-to-4/) on the _Jekyll_ website.
 
-## Setup and run
 
-See [setup and run](/docs/setup_and_run.md) doc.
+## Reuse
 
-## Development
+If you want to setup your own dev portfolio project like this:
 
-See [development](/docs/development.md) docs.
+1. Fork this repo to your own Github account.
+3. Follow instructions in this doc for local or remote setup.
+2. Optionally update badges in the docs to point to your repo.
+
+You do not need to reconfigure any profile username detail to use this repo.
+
+The only API configuration is a secret access token. If you create one for your own account, then the GraphQL query will return data for your own account, as the current authenticated user.
+
+## Create a token
+
+This project relies on setting a Github API access token either in the terminal or as a secret in Github Pages or Netlify. This token is then sent to Github API on the POST request data.
+
+To set this up:
+
+1. Go to the [Personal access tokens](https://github.com/settings/tokens) page of your Github account. Or go through Settings then Developer Settings.
+2. Create a token, with read access to your own repos.
+3. Copy the token value.
+    - This will be used in the remote and local build steps.
+    - The value will not be visible after you leave this screen, however, you can always regenerate the token value.
+
+
+## Docs
+
+- [Remote](/docs/remote.md) - Setup and run on Netlify.
+- [Installation](/docs/installation.md) - Setup locally.
+- [Usage](/docs/usage.md) - Run locally.
+- [Development](/docs/development.md) docs.
 
 ## Future development
 
