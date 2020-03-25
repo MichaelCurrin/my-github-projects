@@ -4,22 +4,23 @@ DEBUG = ENV['DEBUG']
 
 module GithubData
 
-  def self.parse_repo(fetched_repo)
-    fetched_topics = fetched_repo['repositoryTopics']['nodes']
+  def self.parse_repo(repo)
+    topics = repo['repositoryTopics']['nodes']
 
     # We can't use symbols here as Jekyll can't handle symbols.
     # A class or struct was not practical so hash is used here.
     {
-      'name' => fetched_repo['name'],
-      'url' => fetched_repo['url'],
-      'description' => fetched_repo['description'],
+      'name' => repo['name'],
+      'url' => repo['url'],
+      'description' => repo['description'],
 
-      'created_at' => fetched_repo['createdAt'],
-      'updated_at' => fetched_repo['updatedAt'],
+      'created_at' => repo['createdAt'],
+      'updated_at' => repo['updatedAt'],
 
-      'stars' => fetched_repo['stargazers']['totalCount'],
-      'forks' => fetched_repo['forkCount'],
-      'topics' => fetched_topics.map { |t| t['topic']['name'] },
+      'stars' => repo['stargazers']['totalCount'],
+      'forks' => repo['forkCount'],
+
+      'topics' => topics.map { |t| t['topic']['name'] },
     }
   end
 
