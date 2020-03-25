@@ -4,6 +4,7 @@ query ReposWithTopics {
         login
         repositories(first: 100, ownerAffiliations: OWNER, privacy: PUBLIC, orderBy: { field: NAME, direction: ASC }) {
             nodes {
+                # Metadata
                 name
                 url
                 description
