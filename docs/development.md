@@ -3,6 +3,7 @@
 Notes for developing this project.
 
 - [Access token](#access-token)
+- [Styling](#styling)
 - [Reloading](#reloading)
 - [Running scripts](#running-scripts)
 - [Github pages use](#github-pages-use)
@@ -15,9 +16,13 @@ One way to reduce build time is to comment out the Jekyll Github Metadata Plugin
 
 ## Styling
 
-[Bulma](https://bulma.io/) is used for CSS styling.
+The [jekyll-octopod/jekyll-bulma](https://github.com/jekyll-octopod/jekyll-bulma) gem is used. This makes it easy to start using existing templating approach based on [Bulma](https://bulma.io/) component styling. It also means Bulma is instead and locked at a version, which was the main reason for using the theme here.
 
-The [jekyll-octopod/jekyll-bulma](https://github.com/jekyll-octopod/jekyll-bulma) gem is used to make this easier if the _Bulma_ version needs to be locked.
+Bulma links:
+
+- [Form controls](https://bulma.io/documentation/form/general/)
+- [Panel](https://bulma.io/documentation/components/panel/) doc - for search bar.
+  
 
 ## Reloading
 

@@ -39,6 +39,14 @@ To set this up:
     - This will be used in the remote and local build steps.
     - The value will not be visible after you leave this screen, however, you can always regenerate the token value.
 
+
+## Requirements
+
+- **Ruby** >= `2.4`
+- **Bundler**
+- **NodeJS**
+
+
 ## Remote setup
 
 ### Netlify
@@ -58,16 +66,16 @@ Note that this does **not build** even with secret set, perhaps because it is no
 3. Enable Github Pages on `master` branch.
 4. Open the URL.
 
-## Local
-
-## Install
+## Install locally
 
 ### Install system dependencies
 
-Follow this [guide](https://github.com/MichaelCurrin/static-sites-generator-resources/blob/master/Jekyll/setup_and_run.md).
+- Install Ruby and Bundler
+    - Bundler should be installed as a _user_ gem.
+    - See this [Jekyll setup guide](https://github.com/MichaelCurrin/static-sites-generator-resources/blob/master/Jekyll/setup_and_run.md) for help on install and to understand how these are used for Jekyll projects.
+- Install Node
+    - See this [Node guide](https://github.com/MichaelCurrin/learn-to-code/blob/master/Scripting%20languages/JavaScript/node.md) for help.
 
-- Install **Ruby** - at least version `2.4`.
-- Install **Bundler** as _user_ gem.
 
 ### Install project dependencies
 
@@ -87,7 +95,7 @@ Example:
 echo 'GITHUB_TOKEN=abcdef' > .env
 ```
 
-## Run
+## Run locally
 
 ### Serve
 

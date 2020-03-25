@@ -5,10 +5,10 @@
                 <i class="fab fa-github fa-3x" ></i>
             </div>
             <div class="media-content">
-                <p class="title is-4"><a href="{{ repo.url }}">{{ repo.name }}</a></p>
+                <p class="title is-4 list-name" data-name="{{ repo.name }}"><a href="{{ repo.url }}">{{ repo.name }}</a></p>
                 <p class="subtitle is-6">
-                    <i class="fas fa-star"></i> {{ repo.stars }}
-                    <i class="fas fa-code-branch"></i> {{ repo.forks }}
+                    {% if repo.stars != 0 %}<i class="fas fa-star"></i> {{ repo.stars }}{% endif %}
+                    {% if repo.forks != 0 %}<i class="fas fa-code-branch"></i> {{ repo.forks }}{% endif %}
                 </p>
             </div>
         </div>
