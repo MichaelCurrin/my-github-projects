@@ -1,10 +1,30 @@
+require 'json'
 require_relative 'request'
 
 DEBUG = ENV['DEBUG']
 
+
+# From https://www.programming-idioms.org/idiom/173/format-a-number-with-grouped-thousands/2440/ruby
+def thousands_separator(value)
+  value.to_s.gsub(/\B(?=(...)*\b)/, ',')
+end
+
 module GithubData
 
   def self.parse_repo(repo)
+    if DEBUG == '2'
+      puts "REPO RAW DATA"
+      puts JSON.pretty_generate repo
+    end
+
+    # Handle edgecase of an empty repo.
+    branch = repo['defaultBranchRef']
+    if branch
+      total_commits = branch['commits']['history']['totalCount']
+    else
+      total_commits = 0
+    end
+
     topics = repo['repositoryTopics']['nodes']
 
     # We can't use symbols here as Jekyll can't handle symbols.
@@ -19,6 +39,7 @@ module GithubData
 
       'stars' => repo['stargazers']['totalCount'],
       'forks' => repo['forkCount'],
+      'total_commits' => total_commits,
 
       'topics' => topics.map { |t| t['topic']['name'] },
     }
