@@ -1,10 +1,11 @@
-{%- comment -%} From theme's footer.html {%- endcomment -%}
+{%- comment -%} Based on jekyll-octopod/jekyll-bulma {%- endcomment -%}
 <footer class="footer">
     <div class="columns">
         <div class="column">
-            <h1 class="title is-size-4">Github repo</h1>
-            <a
-                href="{{ site.github.owner_url }}/{{ site.github.project_title }}">{{ site.github.owner_name }}/{{ site.github.project_title }}</a>
+            <h1 class="title is-size-4">Github</h1>
+                <a href="{{ site.github.owner_url }}/{{ site.github.project_title }}">
+                    <img src="https://img.shields.io/github/stars/{{ site.github.owner_name }}/{{ site.github.project_title }}?style=social"/>
+                </a>
         </div>
 
         <div class="column">
@@ -15,6 +16,12 @@
         <div class="column">
             <h1 class="title title is-size-4">Social media</h1>
             <ul>
+                <li>
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>
+                </li>
                 <li>
                     <span class="icon">
                         <i class="fab fa-twitter"></i>
