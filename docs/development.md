@@ -32,6 +32,20 @@ Bulma links:
 - [Panel](https://bulma.io/documentation/components/panel/) doc - for search bar.
 
 
+### CSS file
+
+See the [\_scss](/_sass/) directory.
+
+This file shadows the name of an empty file in the theme, to ensure it gets processed. There
+may be better ways but this works okay. This content is added to the main.css file created mostly
+from Bulma content.
+
+This is not ideal as it does not replace the existing rule (such as background color),
+but it does appends at the bottom of the main.css, which still works. Maybe this could be split
+out further using multiple files, variables and imports, but this works okay.
+Maybe override in utilities/derived-variables. Or over variables before import is done, where color variables are used.
+
+
 ## Reloading
 
 At build time:

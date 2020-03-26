@@ -1,6 +1,3 @@
-/* This is not ideal as it does not replace the existing rule, but it does add at the bottom of main.css.
-   Maybe override in utilities/derived-variables. Or over variables before import is done, where color variables are used */
-
 html {
   background-color: #333;
 }
@@ -10,40 +7,14 @@ body {
   color: white;
 }
 
-// Sticky header.
-// TODO: Replace with Bulma sticky header.
-nav.navbar {
-  top: 0;
-  width: 100%;
-  position: fixed;
-}
-
-section.section {
-  margin-top: 100px;
-}
-
-.content h1 {
-  color: white;
-}
-.content h2 {
-  color: white;
-}
-.content h3 {
-  color: white;
-}
+.content h1,
+.content h2,
+.content h3,
 .content h4 {
   color: white;
 }
 
-
-// Keep at bottom of the page.
-// TODO Use Bulma approach, make it smaller and maybe not sticky.
-footer.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding: 2rem 1.5rem 2rem;
-}
+// Footer social icons.
 footer i {
   color: #333;
 }
@@ -51,12 +22,12 @@ footer i {
 
 /* For columns of cards, remove shadow mainly - override Bulma styling of `list` class, as this is used for ListJS. */
 .columns.list {
-    background-color: inherit;
-    border-radius: inherit;
-    box-shadow: inherit;
+  background-color: inherit;
+  border-radius: inherit;
+  box-shadow: inherit;
 }
 
 /* Allow search bar to have a reasonable size - override Bulma setting of 100%. */
 .search.input {
-    width: inherit;
+  width: inherit;
 }
