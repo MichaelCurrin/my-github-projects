@@ -1,0 +1,17 @@
+{%- comment -%} Based on jekyll-octopod/jekyll-bulma {%- endcomment -%}
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+
+    <section class="section">
+      <div class="container content">
+        {{ content }}
+      </div>
+    </section>
+
+    {% include footer.html %}
+  </body>
+</html>
