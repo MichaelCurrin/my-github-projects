@@ -1,3 +1,5 @@
+/** Basic **/
+
 html {
   background-color: #333;
 }
@@ -14,11 +16,25 @@ body {
   color: white;
 }
 
+/** Footer **/
+
+// Make footer stick to the bottom but only visible when you scroll to the bototm of the page.
+body {
+  display: flex;
+  min-height: 94vh;
+  flex-direction: column;
+}
+
+#main {
+  flex: 1;
+}
+
 // Footer social icons.
 footer i {
   color: #333;
 }
 
+/** List JS **/
 
 /* For columns of cards, remove shadow mainly - override Bulma styling of `list` class, as this is used for ListJS. */
 .columns.list {
