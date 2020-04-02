@@ -1,3 +1,4 @@
+# From: https://github.com/MichaelCurrin/Liquid-Thousands-Separated-Filter
 module Jekyll
   module ThousandsSeparatedFilter
     def thousands_separated(input, separator=",")

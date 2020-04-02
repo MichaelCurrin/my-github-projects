@@ -117,7 +117,7 @@ To set this up:
 
 ## Credits
 
-- [mattgemmell/Liquid-Thousands-Separated-Filter](https://github.com/mattgemmell/Liquid-Thousands-Separated-Filter) - thanks to this repo for providing code for [thousands-separated-filter.rb](/_plugins/thousands-separated-filter.rb).
+- [mattgemmell/Liquid-Thousands-Separated-Filter](https://github.com/mattgemmell/Liquid-Thousands-Separated-Filter) - thanks to this repo for providing original code for [thousands-separated-filter.rb](/_plugins/thousands-separated-filter.rb).
 
 ## License
 
