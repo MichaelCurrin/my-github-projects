@@ -20,6 +20,7 @@
 [![Made with Ruby](https://img.shields.io/badge/Made%20with-Ruby-blue.svg)](https://www.ruby-lang.org)
 [![Queries Github GraphQL API](https://img.shields.io/badge/Queries-Github%20GraphQL%20API-blue.svg)](https://developer.github.com/v4/)
 
+**Table of contents:**
 
 - [Purpose](#purpose)
 - [Background](#background)
