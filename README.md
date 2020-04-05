@@ -6,7 +6,7 @@
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
 
 
-**Static site dependencies**
+**Static site dependencies:**
 
 [![Made with Jekyll](https://img.shields.io/badge/Made%20with-Jekyll-blue.svg)](https://jekyllrb.com)
 [![Theme Jekyll Bulma](https://img.shields.io/badge/Theme-jekyll%2D-bulma-blue.svg)](https://github.com/jekyll-octopod/jekyll-bulma)
@@ -15,7 +15,7 @@
 [![Made with List JS](https://img.shields.io/badge/Made%20with-List.js-blue.svg)](https://listjs.com/)
 
 
-**API requests**
+**API requests:**
 
 [![Made with Ruby](https://img.shields.io/badge/Made%20with-Ruby-blue.svg)](https://www.ruby-lang.org)
 [![Queries Github GraphQL API](https://img.shields.io/badge/Queries-Github%20GraphQL%20API-blue.svg)](https://developer.github.com/v4/)
