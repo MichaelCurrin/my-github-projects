@@ -58,6 +58,7 @@ This project was inspired by the listing of repository cards shown through [gith
 
 This _My Github Projects_ repo goes a step further by getting repos and their topics, then grouping them by their topics (labels set for a Github repo). This was made possible by create a plugin (in Ruby) and for efficiency this was done using the Github GraphQL API (such that one request returns 100 repos and their labels at once).
 
+
 ## Requirements
 
 | Name                                                   | Purpose                                                                          |
