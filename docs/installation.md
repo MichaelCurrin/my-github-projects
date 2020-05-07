@@ -7,7 +7,7 @@
     - Bundler should be installed as a _user_ gem.
     - See this [Jekyll setup guide](https://github.com/MichaelCurrin/static-sites-generator-resources/blob/master/Jekyll/setup_and_run.md) for help on install and to understand how these are used for Jekyll projects.
 - Install Node
-    - See this [Node guide](https://github.com/MichaelCurrin/learn-to-code/blob/master/Scripting%20languages/JavaScript/node.md) for help.
+    - See this [Node guide](https://github.com/MichaelCurrin/learn-to-code/blob/master/en/topics/scripting_languages/JavaScript/node.md) for help.
 
 
 ## Install project dependencies
