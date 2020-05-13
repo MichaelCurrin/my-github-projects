@@ -30,16 +30,16 @@
 - [Future development](#future-development)
 - [License](#license)
 
-This project will show your Github account's public repos as a statically generated Jekyll site, both locally or on a remote location such as on Netlify. This could work with Github Actions to run the custom plugins and Jekyll 4. See the CI section on Jekyll docs - then a schedule parameter could be used for nightly or weekly builds.
+This project will show your Github account's public repos as a statically generated Jekyll site, both locally or on a remote location such as on Netlify. This _could_ work also with Github Actions to run the custom plugins and Jekyll 4. See the CI section on Jekyll docs - then a schedule parameter could be used for nightly or weekly builds.
 
-The main limitation that it has rebuilt in order to get the latest repos and topic tags though, but it is easy enough to trigger a new build by hand occasionally on Netlify. And also this project works best when you have a lot of repos (over 10) and also use detailed but consistent tags based on the use (tool / linter / static site) or tech used (programming language / library / host location).
+The main limitation that it has rebuilt in order to get the latest repos and topic tags though, but it is easy enough to trigger a new build by hand occasionally on Netlify (`curl` POSTs requests can even trigger a build there. And also this project works best when you have a lot of repos (over 10) and also use detailed but consistent tags based on the use (tool / linter / static site) or tech used (programming language / library / host location).
 
 
 ## Purpose
 
 This project is setup to show repo data for the **current authenticated Github user** (i.e. not other users). This is easy with the `jekyll-github-metadata` plugin, but that uses Github API version 3 and it does not handle labels. So through some Ruby plugin scripts, this project fetches 100 repos including topics on each and then build a object with topic labels on the outside and repos within.
 
-You can fork this project and setup as a Netlify static site which shows your **own** repos and their topic labels.
+You can **fork** this project and setup as a Netlify static site which shows your **own** repos and their topic labels.
 
 When setup as a website, this project can serve the following purposes for the owner:
 
@@ -56,7 +56,7 @@ If you want to explore your _private_ repos only, change the `privacy` value in 
 
 ## Background
 
-This project was inspired by the listing of repository cards shown through [github/personal-website](https://github.com/github/personal-website) repo. That shows data for a couple of repos, using the Jekyll Github Metadata plugin and Github REST API internally. The public repos output from the plugin covers repos in detail, but there is not topic data and the language labels are limited (they are inferred and they do not reflect the purpose or tooling of a project).
+This project was inspired by the listing of repository cards shown through [github/personal-website](https://github.com/github/personal-website) repo. That shows data for a couple of repos, using the [Jekyll Github Metadata plugin](https://github.com/jekyll/github-metadata) and Github REST API internally. The public repos output from the plugin covers repos in detail, but there is not topic data and the language labels are limited (they are inferred and they do not reflect the purpose or tooling of a project).
 
 This _My Github Projects_ repo goes a step further by getting repos and their topics, then grouping them by their topics (labels set for a Github repo). This was made possible by create a plugin (in Ruby) and for efficiency this was done using the Github GraphQL API (such that one request returns 100 repos and their labels at once).
 
