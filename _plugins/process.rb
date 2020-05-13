@@ -4,6 +4,7 @@ require_relative 'request'
 DEBUG = ENV['DEBUG']
 
 
+# TODO use the plugin in the directory above to make modular. Consider how it can be a dependency for this plugin or maybe keep it all in one to keep it simple.
 # From https://www.programming-idioms.org/idiom/173/format-a-number-with-grouped-thousands/2440/ruby
 def thousands_separator(value)
   value.to_s.gsub(/\B(?=(...)*\b)/, ',')
