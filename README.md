@@ -30,9 +30,9 @@
 - [Future development](#future-development)
 - [License](#license)
 
-This project will show your Github account's public repos as a statically generated Jekyll site, both locally or on a remote location such as on Netlify. This _could_ work also with Github Actions to run the custom plugins and Jekyll 4. See the CI section on Jekyll docs - then a schedule parameter could be used for nightly or weekly builds.
+This project will show your Github account's public repos as a statically generated Jekyll site, both locally or on a remote location such as on Netlify. (This _could_ work also with Github Actions to run the custom plugins and Jekyll 4. See the [Github Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/) section on Jekyll docs - then a schedule parameter could be used for nightly or weekly builds.)
 
-The main limitation that it has rebuilt in order to get the latest repos and topic tags though, but it is easy enough to trigger a new build by hand occasionally on Netlify (`curl` POSTs requests can even trigger a build there. And also this project works best when you have a lot of repos (over 10) and also use detailed but consistent tags based on the use (tool / linter / static site) or tech used (programming language / library / host location).
+The main limitation that the site has rebuilt in order to get the latest repos and topic tags, but that is easy enough to trigger a new build by hand occasionally on Netlify (`curl` POSTs requests can even trigger a build there. And also this project works best when you have a lot of repos (over 10) and also use detailed but consistent tags based on the use (tool / linter / static site) or tech used (programming language / library / host location).
 
 
 ## Purpose
