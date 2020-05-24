@@ -9,6 +9,8 @@ twitter_handle: MichaelCurrin
 
 theme: jekyll-bulma
 
+permalink: pretty
+
 header_pages:
   - all_repos.md
   - all_topics.md
