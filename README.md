@@ -126,8 +126,11 @@ To set this up:
 
 - [mattgemmell/Liquid-Thousands-Separated-Filter](https://github.com/mattgemmell/Liquid-Thousands-Separated-Filter) - thanks to this repo for providing original code for [thousands-separated-filter.rb](/_plugins/thousands-separated-filter.rb).
 
+
 ## License
 
-See [LICENSE](/LICENSE).
+Released under [MIT](/LICENSE).
 
-Feel free to use this project for your own portfolio but please give credit in the repo and the website itself to this repo.
+Any significant portions of code used means you need to a copy of the original source in you repo.
+
+Feel free to use this project for your own portfolio - as a fork or a new project. Please add a link back to this repo.
