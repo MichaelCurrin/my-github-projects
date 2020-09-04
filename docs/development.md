@@ -17,9 +17,9 @@ One way to reduce build time is to comment out the Jekyll Github Metadata Plugin
 Testing the token:
 
 ```sh
-make check-env
+$ make check-env
 
-GITHUB_TOKEN=abc make check-env
+$ GITHUB_TOKEN=abc make check-env
 ```
 
 ## Styling
@@ -43,6 +43,7 @@ from Bulma content.
 This is not ideal as it does not replace the existing rule (such as background color),
 but it does appends at the bottom of the main.css, which still works. Maybe this could be split
 out further using multiple files, variables and imports, but this works okay.
+
 Maybe override in utilities/derived-variables. Or over variables before import is done, where color variables are used.
 
 
@@ -50,8 +51,8 @@ Maybe override in utilities/derived-variables. Or over variables before import i
 
 At build time:
 
-- Github metadata - A request is done to Github API through the Jekyll Github Metadata plugin, which adds `site.github` to the templating namespace. This includes details about the owner, the current repo (based on the remote origin if local) and public repos.
-- GraphQL request - A request is done to Github GraphQL API using this project's custom plugin.
+- GithHub metadata - A request is done to GitHub API through the Jekyll Github Metadata plugin, which adds `site.github` to the templating namespace. This includes details about the owner, the current repo (based on the remote origin if local) and public repos.
+- GraphQL request - A request is done to GitHub GraphQL API using this project's custom plugin.
 
 When saving changes to the repo, the server will restart. The Github metadata will not be fetched again but any changes to changes to templating will be applied. The GraphQL request will also be done - investigation could be done to avoid this happening.
 
@@ -62,8 +63,10 @@ The ruby script cannot be run directly, only through Jekyll. This seems to be a 
 
 More specifically, after happens if `jekyll` is installed (it does install `eventmachine` in vendor but this can't pick it up.)
 
-```
+```sh
 $ bundle exec ruby request.rb
+```
+```
 Could not find eventmachine-1.2.7 in any of the sources
 Run `bundle install` to install missing gems.
 ```
