@@ -5,7 +5,6 @@
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/my-github-projects.svg)](https://GitHub.com/MichaelCurrin/my-github-projects/tags/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
 
-
 **Static site dependencies:**
 
 [![Made with Jekyll](https://img.shields.io/badge/Made_with-Jekyll-blue.svg?logo=jekyll)](https://jekyllrb.com)
@@ -14,11 +13,14 @@
 [![Made with Node.js](https://img.shields.io/badge/Made_with-Node.js-blue.svg?logo=javascript)](https://nodejs.org/)
 [![Made with List.js](https://img.shields.io/badge/Made_with-List.js-blue.svg)](https://listjs.com/)
 
-
 **API requests:**
 
 [![Made with Ruby](https://img.shields.io/badge/Made_with-Ruby-blue.svg?logo=ruby)](https://www.ruby-lang.org)
 [![Queries Github GraphQL API](https://img.shields.io/badge/Queries-Github_GraphQL_API-blue.svg?logo=graphql)](https://developer.github.com/v4/)
+
+**Preview**
+
+![sample screenshot](/sample.jpg)
 
 
 **Table of contents:**
@@ -31,7 +33,7 @@
 - [Future development](#future-development)
 - [License](#license)
 
-This project will show your Github account's public repos as a statically generated Jekyll site, both locally or on a remote location such as on Netlify. (This _could_ work also with Github Actions to run the custom plugins and Jekyll 4. See the [Github Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/) section on Jekyll docs - then a schedule parameter could be used for nightly or weekly builds.)
+This project will show your GitHub account's public repos as a statically generated Jekyll site, both locally or on a remote location such as on Netlify. (This _could_ work also with GitHub Actions to run the custom plugins and Jekyll 4. See the [Github Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/) section on Jekyll docs - then a schedule parameter could be used for nightly or weekly builds.)
 
 The main limitation that the site has rebuilt in order to get the latest repos and topic tags, but that is easy enough to trigger a new build by hand occasionally on Netlify - command-line `curl` POSTs requests can even trigger a build. And also this project works best when you have a lot of repos (over 10) and also use detailed but consistent tags based on the use (tool / linter / static site) or tech used (programming language / library / host location).
 
@@ -40,7 +42,7 @@ The main limitation that the site has rebuilt in order to get the latest repos a
 
 This project is setup to show repo data for the **current authenticated Github user** (i.e. not other users). This is easy with the `jekyll-github-metadata` plugin, but that uses Github API version 3 and it does not handle labels. So through some Ruby plugin scripts, this project fetches 100 repos including topics on each and then build a object with topic labels on the outside and repos within.
 
-You can **fork** this project and setup as a Netlify static site which shows your **own** repos and their topic labels.
+You can **fork** this project and setup as a Netlify static site which shows your **own** repos and their topic labels. You just have to configure your secret token and the query will get your repos.
 
 When setup as a website, this project can serve the following purposes for the owner:
 
@@ -61,8 +63,8 @@ This project was inspired by the listing of repository cards shown through [gith
 
 This _My Github Projects_ repo goes a step further by getting repos and their topics, then grouping them by their topics (labels set for a Github repo). This was made possible by create a plugin (in Ruby) and for efficiency this was done using the Github GraphQL API (such that one request returns 100 repos and their labels at once).
 
-I did a POC for a Ruby plugin for GraphQL request using this repo - [MichaelCurrin/github-gql-ruby](https://github.com/MichaelCurrin/github-gql-ruby). However, the two projects have diverged as I made more changes in this project than that one, until I can make that one installable or as a submodule + symlink into plugins directory.
-
+I did a POC for a Ruby plugin for GraphQL request using this repo - [MichaelCurrin/github-gql-ruby](https://github.com/MichaelCurrin/github-gql-ruby). However, the two projects have diverged as I made more changes in this project than that one, until I can make that one installable or as a submodule + symlink into plugins directory. Also this portfolio site will be easier for me to maintain using a Ruby library for GraphQL or a Python script (which would write out a JSON file to be read as a data file by Jekyll).
+I chose Ruby initially for interest so I could do something useful with Ruby but the solution is not so flexible for me.
 
 ## Requirements
 
