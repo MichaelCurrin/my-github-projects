@@ -1,18 +1,8 @@
 {
   "name": "my-github-projects",
-  "description": "Dev portfolio static site showing a user's Github repos grouped by topic",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MichaelCurrin/my-github-projects.git"
-  },
-  "author": {
-    "name": "Michael Currin"
-  },
+  "description": "Dev portfolio static site showing a user's GitHub repos grouped by topic",
+  "author": "Michael Currin",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/MichaelCurrin/my-github-projects/issues"
-  },
-  "homepage": "https://github.com/MichaelCurrin/my-github-projects#readme",
   "dependencies": {
     "list.js": "^1.5.0"
   }
