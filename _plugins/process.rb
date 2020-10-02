@@ -10,9 +10,11 @@ def thousands_separator(value)
   value.to_s.gsub(/\B(?=(...)*\b)/, ',')
 end
 
-module GithubData
+class GitHubAPI
+  # URL ...
+  # token
 
-  def self.parse_repo(repo)
+  def parse_repo(repo)
     if DEBUG == '2'
       puts "REPO RAW DATA"
       puts JSON.pretty_generate repo
@@ -46,7 +48,7 @@ module GithubData
     }
   end
 
-  def self.process_repos(fetched_repos)
+  def process_repos(fetched_repos)
     repos = {}
     # Structure where key is topic name and value is a hash with key as repo name and
     # value as hash of repo attributes.
@@ -79,8 +81,9 @@ module GithubData
     [repos, topics]
   end
 
-  def self.get_gh_data
-    req = Request.new(ENV['GITHUB_TOKEN'])
+  def get_gh_data
+    token = ENV['GITHUB_TOKEN']
+    req = Request.new(token)
     resp_data = req.query
     fetched_repos = resp_data['viewer']['repositories']['nodes']
 

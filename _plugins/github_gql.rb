@@ -8,7 +8,8 @@ module GithubGQL
         repos = {}
         topics = {}
       else
-        repos, topics = GithubData.get_gh_data
+        gh_api = GitHubAPI.new
+        repos, topics = gh_api.get_gh_data
       end
 
       site.data['all_repos'] = repos
