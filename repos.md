@@ -1,9 +1,9 @@
 ---
-title: All repos
+title: Repos
 layout: page
 ---
 
-This page shows all public Github repos owned by me.
+This page shows all public GitHub repos which are owned by me.
 
 
 <div id="repos">
