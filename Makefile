@@ -17,7 +17,8 @@ install-js:
 	cp node_modules/list.js/dist/* $(JS_DIR)
 
 install-gems:
-	bundle install --path vendor/bundle
+	bundle config set --local path vendor/bundle
+	bundle install
 
 upgrade-gems:
 	bundle update
