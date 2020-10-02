@@ -4,8 +4,6 @@
 #
 # self was used in the module as per this page.
 #   https://stackoverflow.com/questions/322470/can-i-invoke-an-instance-method-on-a-ruby-module-without-including-it
-#
-# TODO: This could be rewritten without self or could be made into a class.
 require 'json'
 require 'faraday'
 
