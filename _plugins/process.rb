@@ -81,7 +81,7 @@ class GitHubAPI
       # TODO Use other attributes. For now just repo name.
       topics_of_fetched_repo = repo_topics.map { |t| t['topic']['name'] }
 
-      for topic in topics_of_fetched_repo do
+      topics_of_fetched_repo.each do |topic|
         if @debug
           puts "  TOPIC #{topic}"
         end
