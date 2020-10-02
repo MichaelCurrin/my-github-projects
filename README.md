@@ -1,5 +1,5 @@
 # My Github Projects
-> Dev portfolio static site showing a user's Github repos grouped by topic
+> Dev portfolio static site showing a user's GitHub repos grouped by topic
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/43e6a441-a21b-4672-84be-e182a337e4cc/deploy-status)](https://app.netlify.com/sites/michael-currin/deploys)
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/my-github-projects.svg)](https://GitHub.com/MichaelCurrin/my-github-projects/tags/)
@@ -127,7 +127,7 @@ To set this up:
 
 ## Credits
 
-- [mattgemmell/Liquid-Thousands-Separated-Filter](https://github.com/mattgemmell/Liquid-Thousands-Separated-Filter) 
+- [mattgemmell/Liquid-Thousands-Separated-Filter](https://github.com/mattgemmell/Liquid-Thousands-Separated-Filter)
     - Thanks to this repo for providing original code for [thousands-separated-filter.rb](/_plugins/thousands-separated-filter.rb).
 - List.js
     - Add live filtering to repos based on user search input
