@@ -27,7 +27,7 @@ install: install-gems install-js
 
 
 s serve:
-	source .env && bundle exec jekyll serve -l
+	source .env && bundle exec jekyll serve --livereload --trace
 
 # Useful to preview the prod build and also log verbose messages and any errors.
 build-dev:
