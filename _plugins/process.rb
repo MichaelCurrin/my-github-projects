@@ -18,7 +18,7 @@ module GithubData
       puts JSON.pretty_generate repo
     end
 
-    # Handle edgecase of an empty repo.
+    # Handle edge-case of an empty repo.
     branch = repo['defaultBranchRef']
     if branch
       total_commits = branch['commits']['history']['totalCount']
@@ -80,8 +80,10 @@ module GithubData
   end
 
   def self.get_gh_data
-    resp_data = Request.query
+    req = Request.new(ENV['GITHUB_TOKEN'])
+    resp_data = req.query
     fetched_repos = resp_data['viewer']['repositories']['nodes']
+
     self.process_repos(fetched_repos)
   end
 end

@@ -9,28 +9,34 @@
 require 'json'
 require 'faraday'
 
-module Request
+class Request
   API_URL = 'https://api.github.com/graphql'
-  TOKEN = ENV['GITHUB_TOKEN']
-  HEADERS = {
-    'Authorization': "token #{TOKEN}",
-    'Content-Type': "application/json",
-  }
 
-  def self.prepare_request(query_filename)
+  def initialize(token)
+    unless token
+      raise 'GitHub API token must be set'
+    end
+
+    @headers = {
+      'Authorization': "token #{token}",
+      'Content-Type': "application/json",
+    }
+  end
+
+  def prepare_request(query_filename)
     query_path = File.join File.dirname(__FILE__), query_filename
     query_contents = File.open(query_path).read
 
     {'query': query_contents}
   end
 
-  def self.post(url, payload)
+  def post(url, payload)
     puts "Do POST request"
 
     resp = Faraday.post(
       url,
       payload.to_json,
-      HEADERS,
+      @headers,
     )
     puts "Status: #{resp.status}"
     if resp.status != 200
@@ -41,11 +47,7 @@ module Request
     resp_data = JSON.parse resp.body
   end
 
-  def self.query()
-    unless TOKEN
-      raise 'Env variable GITHUB_TOKEN must be set'
-    end
-
+  def query()
     query_filename = 'repos_with_topics.gql'
     query_payload = self.prepare_request(query_filename)
     results = post API_URL, query_payload
@@ -60,7 +62,7 @@ module Request
     results['data']
   end
 
-  def self.test
+  def test
     data = self.query()
     puts JSON.pretty_generate data
   end
