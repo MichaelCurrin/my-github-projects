@@ -5,13 +5,14 @@ module GithubGQL
 
     def generate(site)
       token = ENV['GITHUB_TOKEN']
+      disable_gql = ENV['DISABLE_GQL']
       debug = ENV['DEBUG']
 
       unless token
         raise 'GitHub API token must be set'
       end
 
-      if ENV['DISABLE_GQL']
+      if disable_gql
         repos = {}
         topics = {}
       else
