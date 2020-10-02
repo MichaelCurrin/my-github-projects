@@ -69,7 +69,7 @@ class GitHubAPI
     # value as hash of repo attributes.
     topics = Hash.new { |hash, key| hash[key] = {} }
 
-    for fetched_repo in @fetched_repos do
+    @fetched_repos.each do |fetched_repo|
       if @debug
         puts "FETCHED #{fetched_repo["name"]}"
       end
