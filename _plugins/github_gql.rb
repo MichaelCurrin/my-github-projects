@@ -4,11 +4,19 @@ module GithubGQL
   class Generator < Jekyll::Generator
 
     def generate(site)
+      token = ENV['GITHUB_TOKEN']
+      debug = ENV['DEBUG']
+
+      unless token
+        raise 'GitHub API token must be set'
+      end
+
       if ENV['DISABLE_GQL']
         repos = {}
         topics = {}
       else
-        gh_api = GitHubAPI.new ENV['DEBUG']
+        filename = 'repos_with_topics.gql'
+        gh_api = GitHubAPI.new token, filename, debug
         repos, topics = gh_api.get_gh_data
       end
 

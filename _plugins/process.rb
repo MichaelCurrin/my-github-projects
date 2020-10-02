@@ -9,11 +9,24 @@ def thousands_separator(value)
 end
 
 class GitHubAPI
-  # URL ...
-  # token
+  @@API_URL = 'https://api.github.com/graphql'
 
-  def initialize(debug=false)
+  def initialize(token, query_filename, debug)
+    @headers = {
+      'Authorization': "token #{token}",
+      'Content-Type': "application/json",
+    }
+    @payload = format_payload(query_filename)
     @debug = debug
+
+    @fetched_repos = []
+  end
+
+  def format_payload(query_filename)
+    query_path = File.join File.dirname(__FILE__), query_filename
+    query_contents = File.open(query_path).read
+
+    {'query': query_contents}
   end
 
   def parse_repo(repo)
@@ -50,13 +63,13 @@ class GitHubAPI
     }
   end
 
-  def process_repos(fetched_repos)
+  def process_repos
     repos = {}
     # Structure where key is topic name and value is a hash with key as repo name and
     # value as hash of repo attributes.
     topics = Hash.new { |hash, key| hash[key] = {} }
 
-    for fetched_repo in fetched_repos do
+    for fetched_repo in @fetched_repos do
       if @debug
         puts "FETCHED #{fetched_repo["name"]}"
       end
@@ -83,12 +96,14 @@ class GitHubAPI
     [repos, topics]
   end
 
-  def get_gh_data
-    token = ENV['GITHUB_TOKEN']
-    req = Request.new(token)
-    resp_data = req.query
-    fetched_repos = resp_data['viewer']['repositories']['nodes']
+  def request
+    req = Request.new(@@API_URL, @headers, @payload)
+    resp_data = req.query()
+    @fetched_repos = resp_data['viewer']['repositories']['nodes']
+  end
 
-    self.process_repos(fetched_repos)
+  def get_gh_data
+    self.request
+    self.process_repos
   end
 end
