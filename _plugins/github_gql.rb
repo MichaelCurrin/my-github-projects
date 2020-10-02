@@ -8,7 +8,7 @@ module GithubGQL
         repos = {}
         topics = {}
       else
-        gh_api = GitHubAPI.new
+        gh_api = GitHubAPI.new ENV['DEBUG']
         repos, topics = gh_api.get_gh_data
       end
 

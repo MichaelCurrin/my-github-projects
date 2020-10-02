@@ -1,8 +1,6 @@
 require 'json'
 require_relative 'request'
 
-DEBUG = ENV['DEBUG']
-
 
 # TODO use the plugin in the directory above to make modular. Consider how it can be a dependency for this plugin or maybe keep it all in one to keep it simple.
 # From https://www.programming-idioms.org/idiom/173/format-a-number-with-grouped-thousands/2440/ruby
@@ -14,8 +12,12 @@ class GitHubAPI
   # URL ...
   # token
 
+  def initialize(debug=false)
+    @debug = debug
+  end
+
   def parse_repo(repo)
-    if DEBUG == '2'
+    if @debug == '2'
       puts "REPO RAW DATA"
       puts JSON.pretty_generate repo
     end
@@ -55,7 +57,7 @@ class GitHubAPI
     topics = Hash.new { |hash, key| hash[key] = {} }
 
     for fetched_repo in fetched_repos do
-      if DEBUG
+      if @debug
         puts "FETCHED #{fetched_repo["name"]}"
       end
 
@@ -67,7 +69,7 @@ class GitHubAPI
       topics_of_fetched_repo = repo_topics.map { |t| t['topic']['name'] }
 
       for topic in topics_of_fetched_repo do
-        if DEBUG
+        if @debug
           puts "  TOPIC #{topic}"
         end
 
