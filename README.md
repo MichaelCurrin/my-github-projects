@@ -20,7 +20,13 @@
 
 **Preview**
 
-![sample screenshot](/sample.jpg)
+Repos, with optional filter on name.
+
+![Sample screenshot 1](/sample-1.png)
+
+Topic.
+
+![Sample screenshot 2](/sample-2.png)
 
 
 **Table of contents:**
@@ -28,9 +34,11 @@
 - [Purpose](#purpose)
 - [Background](#background)
 - [Requirements](#requirements)
-- [Setup and run](#setup-and-run)
-- [Development](#development)
+- [Reuse](#reuse)
+- [Create a token](#create-a-token)
+- [Docs](#docs)
 - [Future development](#future-development)
+- [Credits](#credits)
 - [License](#license)
 
 This project will show your GitHub account's public repos as a statically generated Jekyll site, both locally or on a remote location such as on Netlify. (This _could_ work also with GitHub Actions to run the custom plugins and Jekyll 4. See the [Github Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/) section on Jekyll docs - then a schedule parameter could be used for nightly or weekly builds.)
