@@ -17,7 +17,7 @@ module GithubGQL
         topics = {}
       else
         filename = 'repos_with_topics.gql'
-        gh_api = GitHubAPI.new token, filename, debug
+        gh_api = GitHubAPI.new(token, filename, debug)
         repos, topics = gh_api.get_gh_data
       end
 
