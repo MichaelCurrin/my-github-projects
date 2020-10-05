@@ -4,8 +4,8 @@
 #
 # self was used in the module as per this page.
 #   https://stackoverflow.com/questions/322470/can-i-invoke-an-instance-method-on-a-ruby-module-without-including-it
-require 'json'
-require 'faraday'
+require "json"
+require "faraday"
 
 class Request
   def initialize(url, headers, payload)
@@ -35,14 +35,14 @@ class Request
   def query()
     results = self.post()
 
-    errors = results['errors']
+    errors = results["errors"]
     if errors
-      puts 'Errors on response:'
+      puts "Errors on response:"
       puts JSON.pretty_generate errors
       raise "Request error!"
     end
 
-    results['data']
+    results["data"]
   end
 
   def test
