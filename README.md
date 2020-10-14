@@ -5,15 +5,11 @@
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/my-github-projects.svg)](https://GitHub.com/MichaelCurrin/my-github-projects/tags/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
 
-**Static site dependencies:**
-
 [![Made with Jekyll](https://img.shields.io/badge/Made_with-Jekyll-blue.svg?logo=jekyll)](https://jekyllrb.com)
 [![Theme Jekyll Bulma](https://img.shields.io/badge/Theme-jekyll%2D-bulma-blue.svg)](https://github.com/jekyll-octopod/jekyll-bulma)
 [![Made with Bulma](https://img.shields.io/badge/Made_with-Bulma-blue.svg?logo=bulma)](https://bulma.io/)
 [![Made with Node.js](https://img.shields.io/badge/Made_with-Node.js-blue.svg?logo=javascript)](https://nodejs.org/)
 [![Made with List.js](https://img.shields.io/badge/Made_with-List.js-blue.svg)](https://listjs.com/)
-
-**API requests:**
 
 [![Made with Ruby](https://img.shields.io/badge/Made_with-Ruby-blue.svg?logo=ruby)](https://www.ruby-lang.org)
 [![Queries Github GraphQL API](https://img.shields.io/badge/Queries-Github_GraphQL_API-blue.svg?logo=graphql)](https://developer.github.com/v4/)
