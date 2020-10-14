@@ -16,22 +16,26 @@ body {
   color: white;
 }
 
-/** Footer **/
-
-// Make footer stick to the bottom but only visible when you scroll to the bototm of the page.
-body {
-  display: flex;
-  min-height: 94vh;
-  flex-direction: column;
-}
-
+// Using dark background means treating links differently in main.
 #main {
-  flex: 1;
+  a {
+    color: cornflowerblue;
+  }
+
+  a:hover {
+    color: lightskyblue;
+  }
 }
 
-// Footer social icons.
-footer i {
-  color: #333;
+/* Use the theme's blue on the white bg cards. */
+#repo-cards {
+  a {
+    color: #3273dc;
+  }
+
+  a:hover {
+    color: grey;
+  }
 }
 
 /** List JS **/
