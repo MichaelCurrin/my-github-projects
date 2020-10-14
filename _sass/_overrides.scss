@@ -16,7 +16,7 @@ body {
   color: white;
 }
 
-// Using dark background means treating links differently in main.
+/* Using dark background means treating links differently in main.*/
 #main {
   a {
     color: cornflowerblue;
@@ -28,7 +28,7 @@ body {
 }
 
 /* Use the theme's blue on the white bg cards. */
-#repo-cards {
+.card {
   a {
     color: #3273dc;
   }
