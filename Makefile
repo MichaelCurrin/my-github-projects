@@ -4,6 +4,10 @@ export GITHUB_TOKEN := $(if $(GITHUB_TOKEN), $(GITHUB_TOKEN), '')
 
 JS_DIR = assets/js
 
+default: install
+
+pre-deploy: install build-prod
+
 
 help:
 	@egrep '^\S|^$$' Makefile
@@ -23,11 +27,11 @@ install-gems:
 upgrade-gems:
 	bundle update
 
-install: install-gems install-js
+install: install-js install-gems
 
 
 s serve:
-	source .env && bundle exec jekyll serve --livereload --trace
+	source .env && bundle exec jekyll serve --trace --livereload
 
 # Useful to preview the prod build and also log verbose messages and any errors.
 build-dev:
@@ -35,11 +39,11 @@ build-dev:
 
 
 build-prod:	install-js
-	jekyll build --trace
+	bundle exec jekyll build --trace
 
 
 # For debugging, check the value of the token.
-# NB. Only run this on a remote if the logs are private, so no one steals your token.
+# NB. Only run this on a remote if the logs are private, so no one steals your token on a PR preview. Will Netlify hide it? Do I need this? Move it to cheatsheet/recipe?
 check-env:
 	@echo Checking value of GITHUB_TOKEN...
 
