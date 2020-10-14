@@ -16,7 +16,7 @@ This page shows all my GitHub repos, grouped by the topics I've assigned to them
             {% for repo_data in repos %}
                 {% assign repo = repo_data[1] %}
                 <div class="column is-3-widescreen is-4-desktop is-6-tablet is-8-mobile">
-                    {% include repo_card.html %}
+                    {% include repo-card.html %}
                 </div>
             {% endfor -%}
         </div>
