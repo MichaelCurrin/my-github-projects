@@ -16,13 +16,13 @@
 
 **Preview**
 
-Repos, with optional filter on name.
+Repos, with optional filter on name:
 
-![Sample screenshot 1](/sample-1.png)
+[![Sample screenshot 1](/sample-1.png)](https://michael-currin.netlify.app/repos/)
 
-Topic.
+Topics:
 
-![Sample screenshot 2](/sample-2.png)
+[![Sample screenshot 2](/sample-2.png)](https://michael-currin.netlify.app/topics/)
 
 
 **Table of contents:**
