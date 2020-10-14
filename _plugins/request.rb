@@ -1,6 +1,6 @@
 # Request application.
 #
-# Do a request to the Github GraphQL API, handle errors and pretty print the parsed response data.
+# Do a request to the GitHub GraphQL API, handle errors and pretty print the parsed response data.
 #
 # self was used in the module as per this page.
 #   https://stackoverflow.com/questions/322470/can-i-invoke-an-instance-method-on-a-ruby-module-without-including-it

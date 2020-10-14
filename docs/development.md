@@ -12,7 +12,7 @@ Notes for developing this project.
 
 It could be possible to mark the token as optional and return empty data in the custom plugin, but this causes issues in other parts which except a structure.
 
-One way to reduce build time is to comment out the Jekyll Github Metadata Plugin from the gem file or to set the number of repos in the GQL query file to a low number.
+One way to reduce build time is to comment out the Jekyll GitHub Metadata Plugin from the gem file or to set the number of repos in the GQL query file to a low number.
 
 Testing the token:
 
@@ -51,10 +51,10 @@ Maybe override in utilities/derived-variables. Or over variables before import i
 
 At build time:
 
-- GithHub metadata - A request is done to GitHub API through the Jekyll Github Metadata plugin, which adds `site.github` to the templating namespace. This includes details about the owner, the current repo (based on the remote origin if local) and public repos.
+- GithHub metadata - A request is done to GitHub API through the Jekyll GitHub Metadata plugin, which adds `site.github` to the templating namespace. This includes details about the owner, the current repo (based on the remote origin if local) and public repos.
 - GraphQL request - A request is done to GitHub GraphQL API using this project's custom plugin.
 
-When saving changes to the repo, the server will restart. The Github metadata will not be fetched again but any changes to changes to templating will be applied. The GraphQL request will also be done - investigation could be done to avoid this happening.
+When saving changes to the repo, the server will restart. The GitHub metadata will not be fetched again but any changes to changes to templating will be applied. The GraphQL request will also be done - investigation could be done to avoid this happening.
 
 
 ## Running scripts

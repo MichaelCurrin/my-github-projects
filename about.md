@@ -5,7 +5,7 @@ layout: page
 
 ## Why
 
-This website is a showcase of my own repos and the topics they fit into. For my own ease of using in searching and comparing my projects and for sharing them with others beyond the limitations of the standard view of repos on a profile on Github.
+This website is a showcase of my own repos and the topics they fit into. For my own ease of using in searching and comparing my projects and for sharing them with others beyond the limitations of the standard view of repos on a profile on GitHub.
 
 
 ## Where
@@ -25,9 +25,9 @@ This project a static website hosted on [Netlify](netlify.com) for free and uses
 
 ## How
 
-On build, a request is done to Github GraphQL API to get repos and their topic labels. For the All Topics page, the structure is inverted such that topics contain repos.
+On build, a request is done to GitHub GraphQL API to get repos and their topic labels. For the All Topics page, the structure is inverted such that topics contain repos.
 
-You can fork and reuse this project to make a site showing your own Github repos. Follow the repo's [README](https://github.com/MichaelCurrin/my-github-projects/blob/master/README.md).
+You can fork and reuse this project to make a site showing your own GitHub repos. Follow the repo's [README](https://github.com/MichaelCurrin/my-github-projects/blob/master/README.md).
 
 
 ## Background

@@ -1,6 +1,6 @@
 require_relative "process"
 
-module GithubGQL
+module GitHubGQL
   class Generator < Jekyll::Generator
     def generate(site)
       token = ENV["GITHUB_TOKEN"]

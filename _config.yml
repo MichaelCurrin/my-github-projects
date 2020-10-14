@@ -1,9 +1,9 @@
-title: My Github Projects
+title: My GitHub Projects
 
 url: https://michael-currin.netlify.com
 baseurl: ""
 
-# Built-in for Github Pages but needed on Netlify.
+# Built-in for GitHub Pages but needed on Netlify.
 repository: MichaelCurrin/my-github-projects
 twitter_handle: MichaelCurrin
 
