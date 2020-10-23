@@ -50,7 +50,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
     multipart-post (2.1.1)
-    octokit (4.18.0)
+    octokit (4.19.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.16.2)
@@ -76,7 +76,7 @@ PLATFORMS
 
 DEPENDENCIES
   faraday (~> 1.0.1)
-  jekyll (~> 4)
+  jekyll (~> 4.1.1)
   jekyll-bulma (= 0.8.1)
   jekyll-github-metadata (~> 2.13.0)
 
