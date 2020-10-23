@@ -1,15 +1,11 @@
 # This makes the variable available in subprocesses, after executing source command.
 # But also make sure not to overwrite a value set already, such as with Netlify secrets.
 export GITHUB_TOKEN := $(if $(GITHUB_TOKEN), $(GITHUB_TOKEN), '')
-
 JS_DIR = assets/js
 
 default: install
 
-pre-deploy: install build-prod
-
-
-help:
+h help:
 	@egrep '^\S|^$$' Makefile
 
 
@@ -33,13 +29,14 @@ install: install-js install-gems
 s serve:
 	source .env && bundle exec jekyll serve --trace --livereload
 
+pre-deploy: install build-prod
+
 # Useful to preview the prod build and also log verbose messages and any errors.
 build-dev:
 	DEBUG=1 source .env && bundle exec jekyll build --trace
 
-
 build-prod:	install-js
-	bundle exec jekyll build --trace
+	JEKYLL_ENV=production bundle exec jekyll build --trace
 
 
 # For debugging, check the value of the token.
