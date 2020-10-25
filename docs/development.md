@@ -14,13 +14,8 @@ It could be possible to mark the token as optional and return empty data in the 
 
 One way to reduce build time is to comment out the Jekyll GitHub Metadata Plugin from the gem file or to set the number of repos in the GQL query file to a low number.
 
-Testing the token:
+To avoid your token being exposed in a PR build triggered by a malicious fork (which might add to the build command or `Makefile`, please keep your log visiblity as **private** in your Netlify app's Deploy settings.
 
-```sh
-$ make check-env
-
-$ GITHUB_TOKEN=abc make check-env
-```
 
 ## Styling
 
@@ -59,9 +54,9 @@ When saving changes to the repo, the server will restart. The GitHub metadata wi
 
 ## Running scripts
 
-The ruby script cannot be run directly, only through Jekyll. This seems to be a bug in one of the gems.
+The Ruby plugin script cannot be run directly, only through Jekyll. This seems to be a bug in one of the gems.
 
-More specifically, after happens if `jekyll` is installed (it does install `eventmachine` in vendor but this can't pick it up.)
+More specifically, it happens after `jekyll` is installed (it does install `eventmachine` in vendor but this can't pick it up).
 
 ```sh
 $ bundle exec ruby request.rb
@@ -76,3 +71,5 @@ This does not help:
 ```ruby
 gem 'eventmachine', '1.2.7'
 ```
+
+Update: Maybe adding eventmachine to Gemfile and bundle install would then hlpe?
