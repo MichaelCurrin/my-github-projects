@@ -17,6 +17,7 @@ h help:
 install-js:
 	npm install
 
+setup-js:
 	rm -rf assets/*
 	mkdir -p $(JS_DIR)
 	cp node_modules/list.js/dist/* $(JS_DIR)
@@ -28,7 +29,7 @@ install-gems:
 upgrade-gems:
 	bundle update
 
-install: install-js install-gems
+install: install-js setup-js install-gems
 
 
 s serve:
@@ -39,5 +40,5 @@ s serve:
 build-dev:
 	DEBUG=1 source .env && bundle exec jekyll build --trace
 
-build-prod: install-js
+build-prod: setup-js
 	JEKYLL_ENV=production bundle exec jekyll build --trace
