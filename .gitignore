@@ -1,5 +1,3 @@
-_site/
-
 .jekyll-cache/
 .jekyll-metadata
 
@@ -8,6 +6,8 @@ vendor/
 
 node_modules/
 assets/
+
+_site/
 
 # Private auth token.
 .env
