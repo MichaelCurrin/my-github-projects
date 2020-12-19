@@ -23,12 +23,19 @@ module Process
       @debug = debug
 
       @fetched_repos = []
+
+      @repos = {}
+      # Key must be topic name.
+      # Value must be a hash, with key as repo name and value as hash of repo attributes.
+      @topics = Hash.new { |hash, key| hash[key] = {} }
     end
 
     def request
       req = Request.new(@@API_URL, @headers, @payload)
       resp_data = req.query()
-      @fetched_repos = resp_data["viewer"]["repositories"]["nodes"]
+      user = resp_data["viewer"]
+      @fetched_original_repos = user["originalRepos"]["nodes"]
+      @fetched_forked_repos = user["forkedRepos"]["nodes"]
     end
 
     def format_payload(query_filename)
@@ -72,19 +79,14 @@ module Process
       }
     end
 
-    def process_repos
-      repos = {}
-      # Key must be topic name.
-      # Value must be a hash, with key as repo name and value as hash of repo attributes.
-      topics = Hash.new { |hash, key| hash[key] = {} }
-
-      @fetched_repos.each do |fetched_repo|
+    def extract_repos_and_topics(fetched_repos)
+      fetched_repos.each do |fetched_repo|
         if @debug
           puts "FETCHED #{fetched_repo["name"]}"
         end
 
         repo = self.parse_repo(fetched_repo)
-        repos[repo["name"]] = repo
+        @repos[repo["name"]] = repo
 
         repo_topics = fetched_repo["repositoryTopics"]["nodes"]
         # TODO Use other attributes. For now just repo name.
@@ -95,16 +97,17 @@ module Process
             puts "  TOPIC #{topic}"
           end
 
-          topics[topic][repo["name"]] = repo
+          @topics[topic][repo["name"]] = repo
         end
       end
-
-      [repos, topics]
     end
 
     def get_repos_and_topics
       self.request
-      self.process_repos
+      self.extract_repos_and_topics(@fetched_original_repos)
+      self.extract_repos_and_topics(@fetched_forked_repos)
+
+      [@repos, @topics]
     end
   end
 end
