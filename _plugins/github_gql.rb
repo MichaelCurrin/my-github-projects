@@ -1,3 +1,4 @@
+# Query the API and make the results available as Liquid variables.
 require_relative "process"
 
 module GitHubGQL
@@ -16,7 +17,7 @@ module GitHubGQL
         topics = {}
       else
         filename = "repos_with_topics.gql"
-        gh_api = GitHubAPI.new(token, filename, debug)
+        gh_api = Process::GitHubAPI.new(token, filename, debug)
         repos, topics = gh_api.get_gh_data
       end
 
