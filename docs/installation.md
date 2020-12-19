@@ -1,5 +1,6 @@
 ## Installation
-> Setup locally
+> How to setup the project locally
+
 
 ## Install system dependencies
 
@@ -18,12 +19,22 @@ Install **local gems**. This command will use _Bundler_ to install gems at proje
 $ make install
 ```
 
+
 ## Setup access token
 
-Add your secret **access token** value to the repo's dotfile, which only needs one property in it
+Make sure you generated a token as per the [Token](token.md) doc.
 
-Example:
+Create an unversioned dotenv file.
 
 ```sh
-echo 'GITHUB_TOKEN=abcdef' > .env
+echo 'GITHUB_TOKEN=VALUE' > .env
 ```
+
+Then open it and replace `VALUE` with your value.
+
+The result will be something like:
+
+- `.env`
+    ```sh
+    GITHUB_TOKEN=abcedf123
+    ```
