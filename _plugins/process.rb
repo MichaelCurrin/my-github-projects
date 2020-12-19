@@ -16,11 +16,7 @@ module Process
     # Get count of total commits, but allow branch to be not set for an empty repo edge-case.
     branch = repo["defaultBranchRef"]
 
-    if branch
-      branch["commits"]["history"]["totalCount"]
-    else
-      0
-    end
+    branch ? branch["commits"]["history"]["totalCount"] : 0
   end
 
   def self.topics_as_names(fetched_repo)
