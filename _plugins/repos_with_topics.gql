@@ -1,47 +1,59 @@
-# Public repos owned by the current user along with metadata including topics.
-# Until paging is implemented in this project, this stops after 100 repos. Rather than going by name, I go
-# by updated date so recent activity shows up.
-query ReposWithTopics {
-	viewer {
-		login
-		repositories(first: 100, ownerAffiliations: OWNER, privacy: PUBLIC, orderBy: { field: UPDATED_AT, direction: DESC }) {
-			nodes {
-				# Metadata
-				name
-				url
-				description
-				# Dates
-				createdAt
-				updatedAt
-				pushedAt
-				# Counts
-				stargazers {
-					totalCount
-				}
-				forkCount
-				defaultBranchRef {
-					commits: target {
-						... on Commit {
-							history(first: 1) {
-								totalCount
-							}
-						}
-					}
-				}
-				# Topic labels. Not available in REST API so the main reason for GQL for this project.
-				repositoryTopics(first: 100) {
-					nodes {
-						topic {
-							name
-							stargazers {
-								totalCount
-							}
-							viewerHasStarred
-						}
-						url
+# Public repos owned by the current user.
+#
+# Warning: This only gives the latest 100 repos by update date and does not implement paging. And
+# attempting to break this out into multiple blocks for forks only and archive only gave a request timeout.
+
+fragment Repos on RepositoryConnection {
+	nodes {
+		# Metadata
+		name
+		url
+		description
+
+		# Dates
+		createdAt
+		updatedAt
+		pushedAt
+
+		# Counts
+		stargazers {
+			totalCount
+		}
+		forkCount
+		defaultBranchRef {
+			commits: target {
+				... on Commit {
+					history(first: 1) {
+						totalCount
 					}
 				}
 			}
+		}
+
+		repositoryTopics(first: 10) {
+			nodes {
+				topic {
+					name
+					stargazers {
+						totalCount
+					}
+					viewerHasStarred
+				}
+				url
+			}
+		}
+	}
+}
+
+query ownedRepos {
+	viewer {
+		repositories(
+			first: 100
+			ownerAffiliations: OWNER
+			privacy: PUBLIC
+			orderBy: { field: UPDATED_AT, direction: DESC }
+		) {
+			...Repos
 		}
 	}
 }
