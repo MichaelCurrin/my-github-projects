@@ -89,10 +89,7 @@ module Process
             puts "  TOPIC #{topic}"
           end
 
-          # TODO: Can this be refactored to one line?
-          stored_topics = topics[topic]
-          stored_topics[repo["name"]] = repo
-          topics[topic] = stored_topics
+          topics[topic][repo["name"]] = repo
         end
       end
 
