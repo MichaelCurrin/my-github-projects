@@ -1,6 +1,7 @@
 # Usage
 > Run locally
 
+
 ## Serve
 
 Start the development server.
@@ -13,16 +14,17 @@ Open in the browser:
 
 - http://localhost:4000/
 
-## Debug
 
-The Jekyll errors are not verbose, but this running with `--trace` command here. Note this will only build and not actually start the server.
+## Build
+
+Do a build with verbose logging.
 
 ```sh
 $ make build-dev
 ```
 
-If you want to disable fetching of GraphQL data, use this as a prefix before a command:
+If you want to **disable** fetching of GraphQL data, use this as a prefix :
 
 ```sh
-$ DISABLE_GQL=1 command
+$ DISABLE_GQL=1
 ```
