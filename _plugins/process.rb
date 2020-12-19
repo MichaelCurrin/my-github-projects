@@ -25,6 +25,12 @@ module Process
       @fetched_repos = []
     end
 
+    def request
+      req = Request.new(@@API_URL, @headers, @payload)
+      resp_data = req.query()
+      @fetched_repos = resp_data["viewer"]["repositories"]["nodes"]
+    end
+
     def format_payload(query_filename)
       query_path = File.join File.dirname(__FILE__), query_filename
       query_contents = File.open(query_path).read
@@ -94,12 +100,6 @@ module Process
       end
 
       [repos, topics]
-    end
-
-    def request
-      req = Request.new(@@API_URL, @headers, @payload)
-      resp_data = req.query()
-      @fetched_repos = resp_data["viewer"]["repositories"]["nodes"]
     end
 
     def get_repos_and_topics
