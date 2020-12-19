@@ -2,6 +2,8 @@
 require_relative "process"
 
 module GitHubGQL
+  QUERY_PATH = "repos_with_topics.gql"
+
   class Generator < Jekyll::Generator
     def generate(site)
       token = ENV["GITHUB_TOKEN"]
@@ -16,8 +18,7 @@ module GitHubGQL
         repos = {}
         topics = {}
       else
-        filename = "repos_with_topics.gql"
-        gh_api = Process::GitHubAPI.new(token, filename, debug)
+        gh_api = Process::GitHubAPI.new(token, QUERY_PATH, debug)
         repos, topics = gh_api.get_gh_data
       end
 
