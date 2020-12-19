@@ -32,16 +32,17 @@ fragment Repos on RepositoryConnection {
 			}
 		}
 
-		repositoryTopics(first: 10) {
+		# TODO use additional fields
+		repositoryTopics(first: 100) {
 			nodes {
 				topic {
 					name
-					stargazers {
-						totalCount
-					}
-					viewerHasStarred
+					# stargazers {
+					# 	totalCount
+					# }
+					# viewerHasStarred
 				}
-				url
+				#url
 			}
 		}
 	}
