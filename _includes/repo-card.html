@@ -31,8 +31,8 @@
 
             <p>
                 Commits: {{ repo.total_commits | thousands_separated }}<br>
-                Updated: {{ repo.updated_at | date_to_string }} <br>
-                Created: {{ repo.created_at | date_to_string }}
+                Updated: {{ repo.updated_at | timeago }} <br>
+                Created: {{ repo.created_at | date: '%b %Y' }}
             </p>
         </div>
     </div>
