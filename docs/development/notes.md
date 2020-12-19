@@ -2,15 +2,25 @@
 
 Notes for developing this project.
 
+- [Query](#query)
 - [Access token](#access-token)
 - [Styling](#styling)
+    - [CSS file](#css-file)
 - [Reloading](#reloading)
 - [Running scripts](#running-scripts)
+- [Format Ruby scripts](#format-ruby-scripts)
+
+
+## Query
+
+I can't exclude archived repos in the query. There is a `isLocked` filter but this gives no results even though I have to archived repos.
+
+I can still use `isArchived` as a field on a repo.
 
 
 ## Access token
 
-It could be possible to mark the token as optional and return empty data in the custom plugin, but this causes issues in other parts which except a structure.
+It could be possible to mark the token as _optional_ and return empty data in the custom plugin, but this causes issues in other parts which except a structure.
 
 One way to reduce build time is to comment out the Jekyll GitHub Metadata Plugin from the gem file or to set the number of repos in the GQL query file to a low number.
 
