@@ -11,7 +11,7 @@ all: install build-dev
 
 
 h help:
-	@egrep '^\S|^$$' Makefile
+	@egrep '^[a-z -]+:' Makefile
 
 
 install-js:
