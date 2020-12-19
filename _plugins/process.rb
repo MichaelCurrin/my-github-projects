@@ -3,15 +3,6 @@ require "json"
 require_relative "request"
 
 module Process
-  # TODO remove as unused.
-  # TODO use the plugin in the directory above to make modular. Consider how it can be a dependency
-  # for this plugin or maybe keep it all in one to keep it simple.
-  # From:
-  #   https://www.programming-idioms.org/idiom/173/format-a-number-with-grouped-thousands/2440/ruby
-  def thousands_separator(value)
-    value.to_s.gsub(/\B(?=(...)*\b)/, ",")
-  end
-
   def self.total_commits_of_repo(repo)
     # Get count of total commits, but allow branch to be not set for an empty repo edge-case.
     branch = repo["defaultBranchRef"]
