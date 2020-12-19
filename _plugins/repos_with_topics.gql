@@ -9,13 +9,11 @@ fragment Repos on RepositoryConnection {
 		name
 		url
 		description
-		isArchived
 		isFork
 
 		# Dates
 		createdAt
 		updatedAt
-		pushedAt
 
 		# Counts
 		stargazers {
