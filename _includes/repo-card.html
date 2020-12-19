@@ -30,9 +30,9 @@
             <p>{{ repo.description }}</p>
 
             <p>
-                Commits: {{ repo.total_commits | thousands_separated }}<br>
-                Updated: {{ repo.updated_at | timeago }} <br>
-                Created: {{ repo.created_at | date: '%b %Y' }}
+                Commits: <b>{{ repo.total_commits | thousands_separated }}</b><br>
+                Updated: <b>{{ repo.updated_at | timeago }}</b><br>
+                Created: <b>{{ repo.created_at | date: '%b %Y' }}</b><br>
             </p>
         </div>
     </div>
