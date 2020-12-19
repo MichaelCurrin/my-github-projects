@@ -19,6 +19,10 @@ collections:
   topics:
     output: true
 
+liquid:
+  strict_filters: true
+  strict_variables: true
+
 exclude:
   - docs/
   - LICENSE
