@@ -1,13 +1,9 @@
 {
     "files.associations": {
-        // Use "Jekyll (HTML)" so that Jekyll Liquid syntax is picked up correctly for validation and highlighting.
-        "*.html": "jekyll",
-        "*.md": "jekyll",
-        // Revert the above rule for doc files. A general rule for docs folder does not work.
-        "README.md": "markdown",
-        "development.md": "markdown",
-        "remote.md": "markdown",
-        "installation.md": "markdown",
-        "usage.md": "markdown"
+        // Enable validation and highlighting.
+        "index.md": "jekyll",
+        "about.md": "jekyll",
+        "repos.md": "jekyll",
+        "topics.md": "jekyll",
     },
 }
