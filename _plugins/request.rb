@@ -1,9 +1,6 @@
-# Request application.
+# Request module.
 #
-# Do a request to the GitHub GraphQL API, handle errors and pretty print the parsed response data.
-#
-# self was used in the module as per this page.
-#   https://stackoverflow.com/questions/322470/can-i-invoke-an-instance-method-on-a-ruby-module-without-including-it
+# Do a request to the GitHub GraphQL API and return data.
 require "json"
 require "faraday"
 
@@ -47,6 +44,7 @@ class Request
 
   def test
     data = self.query()
+    puts "Pretty printed response"
     puts JSON.pretty_generate data
   end
 end
