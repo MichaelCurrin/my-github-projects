@@ -19,6 +19,7 @@ I can still use `isArchived` as a field on a repo.
 
 Both `pushedAt` and `updatedAt` give the same value I think for a push. But the `pushedAt` one doesn't count updating the repo setup on GitHub, meaning `updatedAt` will be more recent so I use that.
 
+
 ## Access token
 
 It could be possible to mark the token as _optional_ and return empty data in the custom plugin, but this causes issues in other parts which except a structure.
@@ -93,3 +94,22 @@ Requires `rufo` to be installed globally.
 ```sh
 $ make format
 ```
+
+
+## Packages
+
+### jemoji
+
+- https://github.com/jekyll/jemoji
+
+This adds support for emojis. This helps for processing emojis in descriptions. Unfortunately, while it processes something like `:shield:` it does not process others like `:badger:`. See the Badge Generator repo.
+
+### jekyll-timeago
+
+- https://github.com/markets/jekyll-timeago
+
+Adds support for showing a date as how long ago.
+
+### jekyll-github-metadata
+
+Take this out locally to avoid API rate limit warnings. You just won't get user profile data of the user, such as the logo.
