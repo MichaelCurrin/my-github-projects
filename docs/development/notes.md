@@ -17,6 +17,7 @@ I can't exclude archived repos in the query. There is a `isLocked` filter but th
 
 I can still use `isArchived` as a field on a repo.
 
+Both `pushedAt` and `updatedAt` give the same value I think for a push. But the `pushedAt` one doesn't count updating the repo setup on GitHub, meaning `updatedAt` will be more recent so I use that.
 
 ## Access token
 
