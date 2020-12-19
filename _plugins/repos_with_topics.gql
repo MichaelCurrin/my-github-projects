@@ -1,7 +1,7 @@
 # Public repos owned by the current user.
 #
-# Warning: This only gives the latest 100 repos by update date and does not implement paging. And
-# attempting to break this out into multiple blocks for forks only and archive only gave a request timeout.
+# Querying original and forked repos separately helps overcome the page limit of 100 somewhat,
+# without implementing pages.
 
 fragment Repos on RepositoryConnection {
 	nodes {
@@ -9,6 +9,8 @@ fragment Repos on RepositoryConnection {
 		name
 		url
 		description
+		isArchived
+		isFork
 
 		# Dates
 		createdAt
@@ -47,10 +49,21 @@ fragment Repos on RepositoryConnection {
 
 query ownedRepos {
 	viewer {
-		repositories(
+		originalRepos: repositories(
 			first: 100
 			ownerAffiliations: OWNER
 			privacy: PUBLIC
+			isFork: false
+			orderBy: { field: UPDATED_AT, direction: DESC }
+		) {
+			...Repos
+		}
+
+		forkedRepos: repositories(
+			first: 100
+			ownerAffiliations: OWNER
+			privacy: PUBLIC
+			isFork: true
 			orderBy: { field: UPDATED_AT, direction: DESC }
 		) {
 			...Repos
