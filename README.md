@@ -39,7 +39,7 @@ Topics:
 
 This project will show your GitHub account's public repos as a statically generated Jekyll site, both locally or on a remote location such as on Netlify. (This _could_ work also with GitHub Actions to run the custom plugins and Jekyll 4. See the [GitHub Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/) section on Jekyll docs - then a schedule parameter could be used for nightly or weekly builds.)
 
-The main limitation that the site has rebuilt in order to get the latest repos and topic tags, but that is easy enough to trigger a new build by hand occasionally on Netlify - command-line `curl` POSTs requests can even trigger a build. And also this project works best when you have a lot of repos (over 10) and also use detailed but consistent tags based on the use (tool / linter / static site) or tech used (programming language / library / host location).
+The main limitation that the site has rebuilt in order to get the latest repos and topic tags, but that is easy enough to trigger a new build by hand occasionally on Netlify - command-line `curl` POST requests can even trigger a build. And also this project works best when you have a lot of repos (over 10) and also use detailed but consistent tags based on the use (tool / linter / static site) or tech used (programming language / library / host location).
 
 
 ## Purpose
@@ -70,18 +70,19 @@ This _My GitHub Projects_ repo goes a step further by getting repos and their to
 I did a POC for a Ruby plugin for GraphQL request using this repo - [MichaelCurrin/github-gql-ruby](https://github.com/MichaelCurrin/github-gql-ruby). However, the two projects have diverged as I made more changes in this project than that one, until I can make that one installable or as a submodule + symlink into plugins directory. Also this portfolio site will be easier for me to maintain using a Ruby library for GraphQL or a Python script (which would write out a JSON file to be read as a data file by Jekyll).
 I chose Ruby initially for interest so I could do something useful with Ruby but the solution is not so flexible for me.
 
+
 ## Requirements
 
-| Name                                                   | Purpose                                                                          |
-| ------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| GitHub account                                         | Repos in this account will be reported on.                                       |
-| [GitHub dev token](https://github.com/settings/tokens) | For GraphQL API requests. Only read access to your public repos is needed.       |
-| [Netlify](https://netlify.com) account                 | Optionally setup the site remotely here.                                         |
-| [Ruby](https://www.ruby-lang.org/en/) >= 2.4           | Run the custom Jekyll [plugins](/_plugins) - includes a query to the GitHub API. |
-| [Bundler](https://bundler.io/)                         | Install project-scoped gems from [Gemfile](/Gemfile).                            |
-| [Node](https://nodejs.org/)                            | Install and run project-scoped Node packages from [package.json](/package.json). |
+| Name                                                   | Purpose                                                                              |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| GitHub account                                         | Repos in your account will be reported on.                                           |
+| [GitHub dev token](https://github.com/settings/tokens) | For GraphQL API requests. Only _read_ access to your public repos is needed.         |
+| [Netlify](https://netlify.com) account                 | Optionally used to deploy the site remotely.                                         |
+| [Ruby](https://www.ruby-lang.org/en/) >= 2.4           | Run the custom Jekyll [plugins](/_plugins) - includes a query to the GitHub API.     |
+| [Bundler](https://bundler.io/)                         | Install project-scoped gems from the [Gemfile](/Gemfile).                            |
+| [Node](https://nodejs.org/)                            | Install and run project-scoped Node packages from the [package.json](/package.json). |
 
-The project gems include _Jekyll 4_, which is therefore not needed globally. For understanding differences between version 3 and 4, see [Upgrading Jekyll 3-to-4](https://jekyllrb.com/docs/upgrading/3-to-4/) on the _Jekyll_ website.
+This project will **not** work on GitHub Pages, unless you use GitHub Actions. Netlify is used here because it requires much less configuration than GitHub Actions.
 
 
 ## Reuse
