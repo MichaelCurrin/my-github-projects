@@ -1,4 +1,4 @@
-# Remote setup
+# Deploy
 
 
 ## Create a token
