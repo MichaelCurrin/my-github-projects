@@ -2,17 +2,17 @@
 > Dev portfolio static site showing a user's GitHub repos grouped by topic
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/43e6a441-a21b-4672-84be-e182a337e4cc/deploy-status)](https://app.netlify.com/sites/michael-currin/deploys)
-[![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/my-github-projects.svg)](https://GitHub.com/MichaelCurrin/my-github-projects/tags/)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
+[![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/my-github-projects)](https://GitHub.com/MichaelCurrin/my-github-projects/tags/)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue)](#license)
 
-[![Made with Jekyll](https://img.shields.io/badge/Made_with-Jekyll-blue.svg?logo=jekyll)](https://jekyllrb.com)
-[![Theme Jekyll Bulma](https://img.shields.io/badge/Theme-jekyll%2D-bulma-blue.svg)](https://github.com/jekyll-octopod/jekyll-bulma)
-[![Made with Bulma](https://img.shields.io/badge/Made_with-Bulma-blue.svg?logo=bulma)](https://bulma.io/)
-[![Made with Node.js](https://img.shields.io/badge/Made_with-Node.js-blue.svg?logo=javascript)](https://nodejs.org/)
-[![Made with List.js](https://img.shields.io/badge/Made_with-List.js-blue.svg)](https://listjs.com/)
+[![Made with Jekyll](https://img.shields.io/badge/Made_with-Jekyll-blue?logo=jekyll)](https://jekyllrb.com)
+[![Theme Jekyll Bulma](https://img.shields.io/badge/Theme-jekyll%2D-bulma-blue)](https://github.com/jekyll-octopod/jekyll-bulma)
+[![Made with Bulma](https://img.shields.io/badge/Made_with-Bulma-blue?logo=bulma)](https://bulma.io/)
+[![Made with Node.js](https://img.shields.io/badge/Made_with-Node.js-blue?logo=javascript)](https://nodejs.org/)
+[![Made with List.js](https://img.shields.io/badge/Made_with-List.js-blue)](https://listjs.com/)
 
-[![Made with Ruby](https://img.shields.io/badge/Made_with-Ruby-blue.svg?logo=ruby)](https://www.ruby-lang.org)
-[![Queries GitHub GraphQL API](https://img.shields.io/badge/Queries-GitHub_GraphQL_API-blue.svg?logo=graphql)](https://developer.github.com/v4/)
+[![Made with Ruby](https://img.shields.io/badge/Made_with-Ruby-blue?logo=ruby)](https://www.ruby-lang.org)
+[![Queries GitHub GraphQL API](https://img.shields.io/badge/Queries-GitHub_GraphQL_API-blue?logo=graphql)](https://developer.github.com/v4/)
 
 **Preview**
 
