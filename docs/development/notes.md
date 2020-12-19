@@ -73,3 +73,12 @@ gem 'eventmachine', '1.2.7'
 ```
 
 Update: Maybe adding eventmachine to Gemfile and bundle install would then hlpe?
+
+
+## Lint Ruby scripts
+
+With Rufo installed as a user gem:
+
+```sh
+$ rufo _plugins
+```
