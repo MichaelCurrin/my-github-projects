@@ -22,6 +22,7 @@ module Process
       "name" => repo["name"],
       "url" => repo["url"],
       "description" => repo["description"],
+      "is_fork" => repo["isFork"],
 
       "created_at" => repo["createdAt"],
       "updated_at" => repo["updatedAt"],
