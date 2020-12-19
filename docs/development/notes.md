@@ -75,10 +75,10 @@ gem 'eventmachine', '1.2.7'
 Update: Maybe adding eventmachine to Gemfile and bundle install would then hlpe?
 
 
-## Lint Ruby scripts
+## Format Ruby scripts
 
-With Rufo installed as a user gem:
+Requires `rufo` to be installed globally.
 
 ```sh
-$ rufo _plugins
+$ make format
 ```

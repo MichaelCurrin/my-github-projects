@@ -34,6 +34,8 @@ upgrade:
 
 install: install-js setup-js install-gems
 
+format:
+	rufo _plugins
 
 s serve:
 	source .env && bundle exec jekyll serve --trace --livereload
