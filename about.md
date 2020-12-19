@@ -10,7 +10,7 @@ This website is a showcase of my own repos and the topics they fit into. For my 
 
 ## Where
 
-- GitHub repo: [{{ site.github.owner_name }}/{{ site.github.project_title }}]({{ site.github.owner_url }}/{{ site.github.project_title }})
+[![MichaelCurrin - my-github-projects](https://img.shields.io/static/v1?label=MichaelCurrin&message=my-github-projects&color=blue&logo=github)](https://github.com/MichaelCurrin/my-github-projects)
 
 
 ## What
