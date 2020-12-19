@@ -1,6 +1,7 @@
 {
     "files.associations": {
         // Enable validation and highlighting.
+        "*.html": "jekyll",
         "index.md": "jekyll",
         "about.md": "jekyll",
         "repos.md": "jekyll",
