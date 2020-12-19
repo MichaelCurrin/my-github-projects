@@ -68,8 +68,8 @@ module Process
 
     def process_repos
       repos = {}
-      # Structure where key is topic name and value is a hash with key as repo name and
-      # value as hash of repo attributes.
+      # Key must be topic name.
+      # Value must be a hash, with key as repo name and value as hash of repo attributes.
       topics = Hash.new { |hash, key| hash[key] = {} }
 
       @fetched_repos.each do |fetched_repo|
