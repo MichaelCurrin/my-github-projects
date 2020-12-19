@@ -105,7 +105,7 @@ module Process
       @fetched_repos = resp_data["viewer"]["repositories"]["nodes"]
     end
 
-    def get_gh_data
+    def get_repos_and_topics
       self.request
       self.process_repos
     end

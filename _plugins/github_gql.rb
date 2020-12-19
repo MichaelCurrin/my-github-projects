@@ -21,7 +21,7 @@ module GitHubGQL
         @topics = {}
       else
         gh_api = Process::GitHubAPI.new(@token, @@QUERY_PATH, @debug)
-        @repos, @topics = gh_api.get_gh_data
+        @repos, @topics = gh_api.get_repos_and_topics
       end
     end
 
