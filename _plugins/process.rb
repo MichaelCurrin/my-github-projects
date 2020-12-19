@@ -12,7 +12,11 @@ module Process
     value.to_s.gsub(/\B(?=(...)*\b)/, ",")
   end
 
-  def self.repo_as_hash(repo, total_commits, topics)
+  def self.topics_as_names(topics)
+    topics.map { |t| t["topic"]["name"] }
+  end
+
+  def self.repo_as_hash(repo, total_commits, topic_names)
     # We can't use symbols here as Jekyll can't handle symbols.
     # A class or struct was not practical so hash is used here.
     {
@@ -27,7 +31,7 @@ module Process
       "forks" => repo["forkCount"],
       "total_commits" => total_commits,
 
-      "topics" => topics.map { |t| t["topic"]["name"] },
+      "topics" => topic_names,
     }
   end
 
@@ -79,9 +83,9 @@ module Process
         total_commits = 0
       end
 
-      topics = repo["repositoryTopics"]["nodes"]
+      topic_names = Process::topics_as_names(repo["repositoryTopics"]["nodes"])
 
-      Process::repo_as_hash(repo, total_commits, topics)
+      Process::repo_as_hash(repo, total_commits, topic_names)
     end
 
     def extract_repos_and_topics(fetched_repos)
