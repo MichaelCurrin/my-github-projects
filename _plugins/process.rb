@@ -12,7 +12,8 @@ module Process
     value.to_s.gsub(/\B(?=(...)*\b)/, ",")
   end
 
-  def self.topics_as_names(topics)
+  def self.topics_as_names(fetched_repo)
+    topics = fetched_repo["repositoryTopics"]["nodes"]
     topics.map { |t| t["topic"]["name"] }
   end
 
@@ -83,7 +84,7 @@ module Process
         total_commits = 0
       end
 
-      topic_names = Process::topics_as_names(repo["repositoryTopics"]["nodes"])
+      topic_names = Process::topics_as_names(repo)
 
       Process::repo_as_hash(repo, total_commits, topic_names)
     end
@@ -95,19 +96,17 @@ module Process
         end
 
         repo = self.parse_repo(fetched_repo)
-        @repos[repo["name"]] = repo
 
-        repo_topics = fetched_repo["repositoryTopics"]["nodes"]
-        # TODO Use other attributes. For now just repo name.
-        topics_of_fetched_repo = repo_topics.map { |t| t["topic"]["name"] }
-
-        topics_of_fetched_repo.each do |topic|
+        topic_names = Process::topics_as_names(fetched_repo)
+        topic_names.each do |topic|
           if @debug
             puts "  TOPIC #{topic}"
           end
 
           @topics[topic][repo["name"]] = repo
         end
+
+        @repos[repo["name"]] = repo
       end
     end
 
