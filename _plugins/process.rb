@@ -3,12 +3,32 @@ require "json"
 require_relative "request"
 
 module Process
+  # TODO remove as unused.
   # TODO use the plugin in the directory above to make modular. Consider how it can be a dependency
   # for this plugin or maybe keep it all in one to keep it simple.
   # From:
   #   https://www.programming-idioms.org/idiom/173/format-a-number-with-grouped-thousands/2440/ruby
   def thousands_separator(value)
     value.to_s.gsub(/\B(?=(...)*\b)/, ",")
+  end
+
+  def self.repo_as_hash(repo, total_commits, topics)
+    # We can't use symbols here as Jekyll can't handle symbols.
+    # A class or struct was not practical so hash is used here.
+    {
+      "name" => repo["name"],
+      "url" => repo["url"],
+      "description" => repo["description"],
+
+      "created_at" => repo["createdAt"],
+      "updated_at" => repo["updatedAt"],
+
+      "stars" => repo["stargazers"]["totalCount"],
+      "forks" => repo["forkCount"],
+      "total_commits" => total_commits,
+
+      "topics" => topics.map { |t| t["topic"]["name"] },
+    }
   end
 
   class GitHubAPI
@@ -61,22 +81,7 @@ module Process
 
       topics = repo["repositoryTopics"]["nodes"]
 
-      # We can't use symbols here as Jekyll can't handle symbols.
-      # A class or struct was not practical so hash is used here.
-      {
-        "name" => repo["name"],
-        "url" => repo["url"],
-        "description" => repo["description"],
-
-        "created_at" => repo["createdAt"],
-        "updated_at" => repo["updatedAt"],
-
-        "stars" => repo["stargazers"]["totalCount"],
-        "forks" => repo["forkCount"],
-        "total_commits" => total_commits,
-
-        "topics" => topics.map { |t| t["topic"]["name"] },
-      }
+      Process::repo_as_hash(repo, total_commits, topics)
     end
 
     def extract_repos_and_topics(fetched_repos)
