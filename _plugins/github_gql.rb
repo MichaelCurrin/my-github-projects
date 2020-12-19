@@ -2,9 +2,9 @@
 require_relative "process"
 
 module GitHubGQL
-  QUERY_PATH = "repos_with_topics.gql"
-
   class Generator < Jekyll::Generator
+    @@QUERY_PATH = "repos_with_topics.gql"
+
     def read_env()
       @disable_gql = ENV["DISABLE_GQL"]
       @debug = ENV["DEBUG"]
@@ -20,7 +20,7 @@ module GitHubGQL
         @repos = {}
         @topics = {}
       else
-        gh_api = Process::GitHubAPI.new(@token, QUERY_PATH, @debug)
+        gh_api = Process::GitHubAPI.new(@token, @@QUERY_PATH, @debug)
         @repos, @topics = gh_api.get_gh_data
       end
     end
