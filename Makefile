@@ -26,7 +26,8 @@ install-gems:
 	bundle config set --local path vendor/bundle
 	bundle install
 
-upgrade-gems:
+upgrade:
+	npm install list.js
 	bundle update
 
 install: install-js setup-js install-gems
