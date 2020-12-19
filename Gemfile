@@ -9,6 +9,7 @@ gem "jekyll-bulma", "0.8.1"
 group :jekyll_plugins do
   gem "faraday", "~> 1.0.1"
   gem "jekyll-timeago", "~> 0.13.1"
-  # Take this out locally to avoid API rate limit warnings. You just won't get user profile data.
+  gem "jemoji", "~> 0.12.0"
+
   gem "jekyll-github-metadata", "~> 2.13.0"
 end
