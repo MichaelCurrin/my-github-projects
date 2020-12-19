@@ -37,7 +37,7 @@ install: install-js setup-js install-gems
 format:
 	rufo _plugins || true
 
-s serve:
+s serve: format
 	source .env && bundle exec jekyll serve --trace --livereload
 
 
