@@ -36,9 +36,9 @@ s serve:
 	source .env && bundle exec jekyll serve --trace --livereload
 
 
-# Useful to preview the prod build and also log verbose messages and any errors.
+# Preview the prod build with verbose log.
 build-dev:
 	DEBUG=1 source .env && bundle exec jekyll build --trace
 
-build-prod: setup-js
+build-prod:
 	JEKYLL_ENV=production bundle exec jekyll build --trace
