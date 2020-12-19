@@ -12,6 +12,17 @@ module Process
     value.to_s.gsub(/\B(?=(...)*\b)/, ",")
   end
 
+  def self.total_commits_of_repo(repo)
+    # Get count of total commits, but allow branch to be not set for an empty repo edge-case.
+    branch = repo["defaultBranchRef"]
+
+    if branch
+      branch["commits"]["history"]["totalCount"]
+    else
+      0
+    end
+  end
+
   def self.topics_as_names(fetched_repo)
     topics = fetched_repo["repositoryTopics"]["nodes"]
     topics.map { |t| t["topic"]["name"] }
@@ -59,6 +70,7 @@ module Process
       req = Request.new(@@API_URL, @headers, @payload)
       resp_data = req.query()
       user = resp_data["viewer"]
+
       @fetched_original_repos = user["originalRepos"]["nodes"]
       @fetched_forked_repos = user["forkedRepos"]["nodes"]
     end
@@ -76,14 +88,7 @@ module Process
         puts JSON.pretty_generate repo
       end
 
-      # Handle edge-case of an empty repo.
-      branch = repo["defaultBranchRef"]
-      if branch
-        total_commits = branch["commits"]["history"]["totalCount"]
-      else
-        total_commits = 0
-      end
-
+      total_commits = Process::total_commits_of_repo(repo)
       topic_names = Process::topics_as_names(repo)
 
       Process::repo_as_hash(repo, total_commits, topic_names)
