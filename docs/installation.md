@@ -20,17 +20,14 @@ $ make install
 ```
 
 
-## Setup access token
+## Configure
 
-Make sure you generated a token as per the [Token](token.md) doc.
-
-Create an unversioned dotenv file.
-
-```sh
-echo 'GITHUB_TOKEN=VALUE' > .env
-```
-
-Then open it and replace `VALUE` with your value.
+1. Make sure you generated a token as per the [Token](token.md) doc.
+2. Create an dotenv file from the template.
+    ```sh
+    $ cp .env.template .env
+    ```
+3. Open the `.env` file and add your secret token value and save the file.
 
 The result will be something like:
 
@@ -38,3 +35,5 @@ The result will be something like:
     ```sh
     GITHUB_TOKEN=abcedf123
     ```
+
+This project is setup top _ignore_ this file to prevent it being accidentally committed and shared.
