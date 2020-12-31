@@ -17,7 +17,7 @@
 
 <div align="center">
 
-[![View site](https://img.shields.io/badge/View_site-My_GitHub_Projects-green?style=for-the-badge&logo=netlify)](https://michael-currin.netlify.app)
+[![View site](https://img.shields.io/badge/View_site-My_GitHub_Projects-2ea44f?style=for-the-badge&logo=netlify)](https://michael-currin.netlify.app)
 
 </div>
 
