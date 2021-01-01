@@ -1,3 +1,6 @@
+---
+permalink: /
+---
 # My GitHub Projects documentation
 
 - [Overview](overview.md) - info about how this project works and its purpose.
