@@ -13,7 +13,7 @@ Follow the [Token](token.md) doc then continue below.
 3. Edit the deploy **environment** variables - add `GITHUB_TOKEN` and use your value.
 4. Open the deployed URL.
 
-Notes on the build command in [netlify.toml](/netlify.toml):
+Notes on the build command in [netlify.toml][] config:
 
 - The _Jekyll_ install is automatic, so just the JS install is needed.
 - An `.env` file is not needed here, since using Netlify secrets.
@@ -21,6 +21,7 @@ Notes on the build command in [netlify.toml](/netlify.toml):
 
 Note that _Node_ is already available on Netlify.
 
+[netlify.toml]: https://github.com/MichaelCurrin/my-github-projects/blob/master/netlify.toml
 
 ## Setup GitHub Pages
 
