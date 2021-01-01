@@ -2,6 +2,7 @@
 
 Notes for developing this project.
 
+- [Background](#background)
 - [Query](#query)
 - [Access token](#access-token)
 - [Styling](#styling)
@@ -51,7 +52,7 @@ It could be possible to mark the token as _optional_ and return empty data in th
 
 One way to reduce build time is to comment out the Jekyll GitHub Metadata Plugin from the gem file or to set the number of repos in the GQL query file to a low number.
 
-To avoid your token being exposed in a PR build triggered by a malicious fork (which might add to the build command or `Makefile`, please keep your log visiblity as **private** in your Netlify app's Deploy settings.
+To avoid your token being exposed in a PR build triggered by a malicious fork (which might add to the build command or `Makefile`, please keep your log visibility as **private** in your Netlify app's Deploy settings.
 
 
 ## Styling
@@ -66,15 +67,17 @@ Bulma links:
 
 ### CSS file
 
-See the [\_scss](/_sass/) directory.
+See the [SASS][] directory.
 
-This file shadows the name of an empty file in the theme, to ensure it gets processed. There
-may be better ways but this works okay. This content is added to the main.css file created mostly
-from Bulma content.
+[SASS]: https://github.com/MichaelCurrin/my-github-projects/tree/master/_sass
 
-This is not ideal as it does not replace the existing rule (such as background color),
-but it does appends at the bottom of the main.css, which still works. Maybe this could be split
-out further using multiple files, variables and imports, but this works okay.
+This file shadows the name of an empty file in the theme, to ensure it gets processed. There may be
+better ways but this works okay. This content is added to the main.css file created mostly from
+Bulma content.
+
+This is not ideal as it does not replace the existing rule (such as background color), but it does
+appends at the bottom of the main.css, which still works. Maybe this could be split out further
+using multiple files, variables and imports, but this works okay.
 
 Maybe override in utilities/derived-variables. Or over variables before import is done, where color variables are used.
 
