@@ -108,7 +108,7 @@ This adds support for emojis. This helps for processing emojis in descriptions. 
 
 - https://github.com/markets/jekyll-timeago
 
-Adds support for showing a date as how long ago.
+Adds support for showing a date as how long ago (e.g. `today` or `2 months and 2 days ago`). A downside of this is that `today` is relative to the build date and not the date for the viewer visiting the site, so this should go back to plain dates, or the site should rebuild more often.
 
 ### jekyll-github-metadata
 
