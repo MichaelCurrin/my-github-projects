@@ -1,7 +1,7 @@
 ---
 permalink: /
 ---
-# My GitHub Projects documentation
+# Documentation
 
 - [Overview](overview.md) - info about how this project works and its purpose.
 - [Requirements](requirements.md) - Read this before you start.
@@ -9,4 +9,4 @@ permalink: /
 - [Usage](usage.md) - Run locally.
 - [Deploy](deploy.md) - Setup and run on Netlify.
 - [Token](token.md) - Generate a GitHub access token.
-- [Development](development/) - For understanding and changing this project.
+- [Development](development.md) - For understanding and changing this project.
