@@ -1,7 +1,9 @@
 ---
 permalink: /
 ---
-# Documentation
+## Documentation
+
+[![MichaelCurrin - my-github-projects](https://img.shields.io/static/v1?label=MichaelCurrin&message=my-github-projects&color=blue&logo=github)](https://github.com/MichaelCurrin/my-github-projects)
 
 - [Overview](overview.md) - info about how this project works and its purpose.
 - [Requirements](requirements.md) - Read this before you start.
