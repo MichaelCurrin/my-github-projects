@@ -58,7 +58,7 @@ Maybe override in utilities/derived-variables. Or over variables before import i
 
 At build time:
 
-- GithHub metadata - A request is done to GitHub API through the Jekyll GitHub Metadata plugin, which adds `site.github` to the templating namespace. This includes details about the owner, the current repo (based on the remote origin if local) and public repos.
+- GitHub metadata - A request is done to GitHub API through the Jekyll GitHub Metadata plugin, which adds `site.github` to the templating namespace. This includes details about the owner, the current repo (based on the remote origin if local) and public repos.
 - GraphQL request - A request is done to GitHub GraphQL API using this project's custom plugin.
 
 When saving changes to the repo, the server will restart. The GitHub metadata will not be fetched again but any changes to changes to templating will be applied. The GraphQL request will also be done - investigation could be done to avoid this happening.
