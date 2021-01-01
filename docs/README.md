@@ -6,5 +6,4 @@
 - [Usage](usage.md) - Run locally.
 - [Deploy](deploy.md) - Setup and run on Netlify.
 - [Token](token.md) - Generate a GitHub access token.
-- [Development](development/) docs - For understanding and modifying this project.
-- [Credits](credits.md)
+- [Development](development/) - For understanding and changing this project.
