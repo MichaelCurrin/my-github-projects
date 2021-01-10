@@ -7,9 +7,10 @@ This project relies on create a GitHub API access token with read-only access to
 
 To set this up:
 
-1. Open **Personal access tokens** page on GitHub account.
-    - Go to [link](https://github.com/settings/tokens).
-    - Or go to Settings and then Developer Settings.
+1. Open **Personal access tokens** page on your GitHub account.
+    1. Settings page.
+    2. Developer Settings.
+    3. [Tokens](https://github.com/settings/tokens) page.
 2. Grant **read-only** permissions to your public repos.
     - Tick the `public_repo` option only.
 3. **Create** the token.
