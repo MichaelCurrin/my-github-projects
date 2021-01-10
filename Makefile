@@ -16,6 +16,10 @@ h help:
 	@egrep '^[a-z -]+:' Makefile
 
 
+.PHONY: hooks
+hooks:
+	cd .git/hooks && ln -s -f ../../hooks/pre-push pre-push
+
 install-js:
 	npm install
 

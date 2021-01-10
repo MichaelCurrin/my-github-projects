@@ -8,7 +8,13 @@
 - Install Node.js - follow this [gist](https://gist.github.com/MichaelCurrin/aa1fc56419a355972b96bce23f3bccba).
 
 
-## Install project dependencies
+## Install project packages
+
+Setup a hook to build before pushing.
+
+```sh
+$ make hooks
+```
 
 Install local packages - NPM packages in `node_modules` and gems in `vendor`.
 
