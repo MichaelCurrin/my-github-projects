@@ -9,12 +9,8 @@
     <title>
         {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
     </title>
-    <meta name="description"
-        content="{%- if page.excerpt -%}
-                    {{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}
-                {%- else -%}
-                    {{ site.description }}
-                {%- endif -%}">
+
+    {% seo %}
 
     <link href="{{ '/assets/fonts/ubuntu/ubuntu-v11-latin-ext_latin-regular.woff' | relative_url }}"
         rel='stylesheet'
@@ -23,10 +19,6 @@
         href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="canonical"
         href="{{ page.url | replace:'index.html','' | absolute_url }}">
-    <link rel="alternate"
-        type="application/rss+xml"
-        title="{{ site.title }}"
-        href="{{ '/feed.xml' | absolute_url }}">
 
     <script src="{{ '/assets/js/dropdown.js' | relative_url }}"></script>
     {% comment %} Custom content {% endcomment %}
