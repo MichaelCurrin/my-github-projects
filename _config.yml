@@ -7,7 +7,7 @@ twitter_handle: MichaelCurrin
 
 ### Build settings ###
 
-url: https://michael-currin.netlify.com
+url: https://michael-currin.netlify.app
 baseurl: ""
 
 theme: jekyll-bulma
