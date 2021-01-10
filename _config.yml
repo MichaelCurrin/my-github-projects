@@ -1,10 +1,14 @@
-title: My GitHub Projects
+### Site metadata ###
 
-url: https://michael-currin.netlify.com
-baseurl: ""
+title: My GitHub Projects
 
 repository: MichaelCurrin/my-github-projects
 twitter_handle: MichaelCurrin
+
+### Build settings ###
+
+url: https://michael-currin.netlify.com
+baseurl: ""
 
 theme: jekyll-bulma
 
