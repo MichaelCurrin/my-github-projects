@@ -39,15 +39,14 @@ With optional filter on name.
 
 ## Setup your own portfolio
 
-How to reuse this repo and site for yourself.
+How to reuse this repo and to make portfolio site for yourself.
 
 1. Fork this repo to your own GitHub account.
-3. Follow instructions in docs for local or remote setup.
-2. Optionally update badges in the docs to point to your repo.
+2. Follow instructions in the docs for local or remote setup.
+3. Make any custom updates like config values and making the doc badges point to your repo.
+4. Comply with [License](#license) section below.
 
-You do not need to reconfigure any profile username detail to use this repo.
-
-The only API configuration needed is a secret access token. If you create one for your own account, then the GraphQL query will return data for your own account, as the current authenticated user.
+In the setup instructions, you'll generate a GitHub secret token for your account. The GitHub GraphQL query will then get data for you as the authenticating user. You do not have to set your own GitHub username anywhere.
 
 
 ## Documentation
