@@ -21,7 +21,6 @@ collections:
 
 liquid:
   strict_filters: true
-  strict_variables: true
 
 exclude:
   - docs/

@@ -7,9 +7,10 @@ gem "jekyll", "~> 4.2"
 gem "jekyll-bulma", "0.8.1"
 
 group :jekyll_plugins do
-  gem "faraday", "~> 1.3"
-  gem "jekyll-timeago", "~> 0.13"
+  gem "jekyll-sitemap", "~> 1.4"
+  gem "jekyll-github-metadata", "~> 2.13"
   gem "jemoji", "~> 0.12"
 
-  gem "jekyll-github-metadata", "~> 2.13"
+  gem "faraday", "~> 1.3"
+  gem "jekyll-timeago", "~> 0.13"
 end
