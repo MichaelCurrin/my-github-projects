@@ -45,7 +45,6 @@ s serve: format
 	source .env && bundle exec jekyll serve --trace --livereload
 
 
-# Preview the prod build with verbose log.
 build-dev:
 	DEBUG=1 . .env && bundle exec jekyll build --trace
 
