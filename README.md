@@ -2,6 +2,7 @@
 > Dev portfolio static site showing a user's GitHub repos grouped by topic
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/43e6a441-a21b-4672-84be-e182a337e4cc/deploy-status)](https://app.netlify.com/sites/michael-currin/deploys)
+[![Known Vulnerabilities gems](https://snyk.io/test/github/MichaelCurrin/my-github-projects/badge.svg?targetFile=Gemfile.lock)](https://snyk.io/test/github/MichaelCurrin/my-github-projects?targetFile=Gemfile.lock)
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/my-github-projects?include_prereleases&sort=semver)](https://github.com/MichaelCurrin/my-github-projects/releases/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue)](#license)
 
