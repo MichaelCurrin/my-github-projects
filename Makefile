@@ -33,8 +33,9 @@ install-gems:
 	bundle install
 
 upgrade:
-	npm install list.js
+	npm install list.js@latest
 	bundle update
+	git status --short
 
 install: install-js setup-js install-gems
 
