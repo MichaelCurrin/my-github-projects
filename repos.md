@@ -5,7 +5,6 @@ layout: page
 
 This page shows all public GitHub repos which are owned by me.
 
-
 <div id="repos">
     <div class="container">
         <!-- Filter controls -->
