@@ -38,10 +38,10 @@ upgrade:
 
 install: install-js setup-js install-gems
 
-format:
-	rufo _plugins || true
+fmt:
+	bundle exec rufo _plugins
 
-s serve: format
+s serve: fmt
 	source .env && bundle exec jekyll serve --trace --livereload
 
 

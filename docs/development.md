@@ -117,10 +117,8 @@ Update: Maybe adding eventmachine to Gemfile and bundle install would then help?
 
 ## Format Ruby scripts
 
-Requires `rufo` to be installed globally.
-
 ```sh
-$ make format
+$ make fmt
 ```
 
 

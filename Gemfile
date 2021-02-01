@@ -16,3 +16,5 @@ group :jekyll_plugins do
   gem "faraday", "~> 1.3"
   gem "jekyll-timeago", "~> 0.13"
 end
+
+gem "rufo", "~> 0.12.0", :group => :development
