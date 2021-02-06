@@ -48,7 +48,8 @@ s serve: fmt
 
 
 build-dev:
-	DEBUG=1 . .env && bundle exec jekyll build --trace
+	DEBUG=1 source .env \
+		&& bundle exec jekyll build --trace
 
 build-prod:
 	JEKYLL_ENV=production bundle exec jekyll build --trace
