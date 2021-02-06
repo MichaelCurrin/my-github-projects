@@ -1,10 +1,5 @@
 SHELL = /bin/bash
-
-# This makes the variable available in subprocesses, after executing source command.
-# But also make sure not to overwrite a value set already, such as with Netlify secrets.
-export GITHUB_TOKEN := $(if $(GITHUB_TOKEN), $(GITHUB_TOKEN), '')
 JS_DIR = assets/js
-
 
 default: install
 
@@ -51,5 +46,6 @@ build-dev:
 	DEBUG=1 source .env \
 		&& bundle exec jekyll build --trace
 
+export GITHUB_TOKEN
 build-prod:
 	JEKYLL_ENV=production bundle exec jekyll build --trace
