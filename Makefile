@@ -11,7 +11,7 @@ default: install
 # Local pre-deploy check.
 all: install build-dev
 
-
+# Show targets available.
 h help:
 	@egrep '^[a-z -]+:' Makefile
 
