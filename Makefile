@@ -46,6 +46,5 @@ build-dev:
 	DEBUG=1 source .env \
 		&& bundle exec jekyll build --trace
 
-export GITHUB_TOKEN
 build-prod:
 	JEKYLL_ENV=production bundle exec jekyll build --trace
