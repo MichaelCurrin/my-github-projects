@@ -43,7 +43,8 @@ fmt:
 	bundle exec rufo _plugins
 
 s serve: fmt
-	source .env && bundle exec jekyll serve --trace --livereload
+	source .env \
+		&& bundle exec jekyll serve --trace --livereload
 
 
 build-dev:
