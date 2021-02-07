@@ -14,7 +14,7 @@
 [![Made with Jekyll](https://img.shields.io/badge/jekyll-4.x-blue?logo=jekyll)](https://jekyllrb.com)
 [![Theme Jekyll Bulma](https://img.shields.io/badge/Theme-jekyll--bulma-blue)](https://github.com/jekyll-octopod/jekyll-bulma)
 [![Made with Bulma](https://img.shields.io/badge/Made_with-Bulma-blue?logo=bulma)](https://bulma.io/)
-[![dependency - list.js](https://img.shields.io/badge/dependency-list.js-blue)](https://www.npmjs.com/package/list.js)
+[![Package - list.js](https://img.shields.io/github/package-json/dependency-version/MichaelCurrin/my-github-projects/list.js)](https://www.npmjs.com/package/list.js)
 
 
 ## Website
