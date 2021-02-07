@@ -2,7 +2,7 @@
 > Dev portfolio static site showing a user's GitHub repos grouped by topic
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/43e6a441-a21b-4672-84be-e182a337e4cc/deploy-status)](https://app.netlify.com/sites/michael-currin/deploys)
-[![Known Vulnerabilities gems](https://snyk.io/test/github/MichaelCurrin/my-github-projects/badge.svg?targetFile=Gemfile.lock)](https://snyk.io/test/github/MichaelCurrin/my-github-projects?targetFile=Gemfile.lock)
+[![Scheduled Netlify deploy](https://github.com/MichaelCurrin/my-github-projects/workflows/Scheduled%20Netlify%20deploy/badge.svg)](https://github.com/MichaelCurrin/my-github-projects/actions?query=workflow:"Scheduled+Netlify+deploy")
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/my-github-projects?include_prereleases&sort=semver)](https://github.com/MichaelCurrin/my-github-projects/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 
@@ -10,13 +10,14 @@
 [![Made with Node.js](https://img.shields.io/badge/Node.js->=12-blue?logo=javascript)](https://nodejs.org/)
 [![Uses GitHub GraphQL API](https://img.shields.io/badge/Uses-GitHub_GraphQL_API-blue?logo=graphql)](https://developer.github.com/v4/)
 
+[![Known Vulnerabilities gems](https://snyk.io/test/github/MichaelCurrin/my-github-projects/badge.svg?targetFile=Gemfile.lock)](https://snyk.io/test/github/MichaelCurrin/my-github-projects?targetFile=Gemfile.lock)
 [![Made with Jekyll](https://img.shields.io/badge/jekyll-4.x-blue?logo=jekyll)](https://jekyllrb.com)
 [![Theme Jekyll Bulma](https://img.shields.io/badge/Theme-jekyll--bulma-blue)](https://github.com/jekyll-octopod/jekyll-bulma)
 [![Made with Bulma](https://img.shields.io/badge/Made_with-Bulma-blue?logo=bulma)](https://bulma.io/)
 [![dependency - list.js](https://img.shields.io/badge/dependency-list.js-blue)](https://www.npmjs.com/package/list.js)
 
 
-## Site
+## Website
 
 <div align="center">
 
