@@ -4,23 +4,23 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/43e6a441-a21b-4672-84be-e182a337e4cc/deploy-status)](https://app.netlify.com/sites/michael-currin/deploys)
 [![Known Vulnerabilities gems](https://snyk.io/test/github/MichaelCurrin/my-github-projects/badge.svg?targetFile=Gemfile.lock)](https://snyk.io/test/github/MichaelCurrin/my-github-projects?targetFile=Gemfile.lock)
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/my-github-projects?include_prereleases&sort=semver)](https://github.com/MichaelCurrin/my-github-projects/releases/)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue)](#license)
+[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 
 [![Made with Ruby](https://img.shields.io/badge/Ruby->=2.6-blue?logo=ruby)](https://www.ruby-lang.org)
 [![Made with Node.js](https://img.shields.io/badge/Node.js->=12-blue?logo=javascript)](https://nodejs.org/)
 [![Uses GitHub GraphQL API](https://img.shields.io/badge/Uses-GitHub_GraphQL_API-blue?logo=graphql)](https://developer.github.com/v4/)
 
-[![Made with Jekyll](https://img.shields.io/badge/jekyll-4-blue?logo=jekyll)](https://jekyllrb.com)
+[![Made with Jekyll](https://img.shields.io/badge/jekyll-4.x-blue?logo=jekyll)](https://jekyllrb.com)
 [![Theme Jekyll Bulma](https://img.shields.io/badge/Theme-jekyll--bulma-blue)](https://github.com/jekyll-octopod/jekyll-bulma)
 [![Made with Bulma](https://img.shields.io/badge/Made_with-Bulma-blue?logo=bulma)](https://bulma.io/)
-[![Made with List.js](https://img.shields.io/badge/Made_with-List.js-blue)](https://listjs.com/)
+[![dependency - list.js](https://img.shields.io/badge/dependency-list.js-blue)](https://www.npmjs.com/package/list.js)
 
+
+## Site
 
 <div align="center">
 
 [![view - Site](https://img.shields.io/badge/View_site-My_GitHub_Projects-2ea44f?style=for-the-badge&logo=netlify)](https://michael-currin.netlify.app)
-
-[![view - Documentation](https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge)](https://michaelcurrin.github.io/my-github-projects/)
 
 </div>
 
@@ -52,7 +52,11 @@ In the setup instructions, you'll generate a GitHub secret token for your accoun
 
 ## Documentation
 
+<div align="center">
+
 [![view - Documentation](https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge)](/docs/)
+
+</div>
 
 
 ## License
