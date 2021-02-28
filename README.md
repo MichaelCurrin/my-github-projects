@@ -8,7 +8,7 @@
 
 [![Made with Ruby](https://img.shields.io/badge/Ruby->=2.6-blue?logo=ruby)](https://www.ruby-lang.org)
 [![Made with Node.js](https://img.shields.io/badge/Node.js->=12-blue?logo=javascript)](https://nodejs.org/)
-[![Uses GitHub GraphQL API](https://img.shields.io/badge/Uses-GitHub_GraphQL_API-blue?logo=graphql)](https://developer.github.com/v4/)
+[![Uses GitHub GraphQL API](https://img.shields.io/badge/Made_with-GitHub_GraphQL_API-blue?logo=graphql)](https://developer.github.com/v4/)
 
 [![Known Vulnerabilities gems](https://snyk.io/test/github/MichaelCurrin/my-github-projects/badge.svg?targetFile=Gemfile.lock)](https://snyk.io/test/github/MichaelCurrin/my-github-projects?targetFile=Gemfile.lock)
 [![Made with Jekyll](https://img.shields.io/badge/jekyll-4.x-blue?logo=jekyll)](https://jekyllrb.com)
