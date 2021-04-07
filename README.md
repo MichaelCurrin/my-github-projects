@@ -16,6 +16,10 @@
 [![Made with Bulma](https://img.shields.io/badge/Made_with-Bulma-blue?logo=bulma)](https://bulma.io/)
 [![Package - list.js](https://img.shields.io/github/package-json/dependency-version/MichaelCurrin/my-github-projects/list.js)](https://www.npmjs.com/package/list.js)
 
+Showcase your GitHub repos as a statically-rendered site. Built on Jekyll and GitHub GraphQL API.
+
+The project is deployed and hosted on Netlify. GitHub Actions is used to trigger a build daily, to ensure the latest repo info is used.
+
 
 ## Website
 
@@ -30,11 +34,13 @@
 
 ### Repos
 
-With optional filter on name.
+This page shows a list of all of the user's repos. With optional filter on name.
 
 [![Sample screenshot 1](/sample-1.png)](https://michael-currin.netlify.app/repos/)
 
 ### Topics
+
+Show all repos grouped by topic (e.g. `#jekyll` or `#github-pages-site`).
 
 [![Sample screenshot 2](/sample-2.png)](https://michael-currin.netlify.app/topics/)
 
