@@ -30,7 +30,10 @@ install: install-js setup-js install-gems
 
 upgrade:
 	npm install list.js@latest
+
+	bundle clean
 	bundle update
+
 	git status --short
 
 
