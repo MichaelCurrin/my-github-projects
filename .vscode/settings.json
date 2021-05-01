@@ -1,10 +1,10 @@
 {
   "files.associations": {
     // Enable validation and highlighting.
-    "*.html": "jekyll",
-    "index.md": "jekyll",
-    "about.md": "jekyll",
-    "repos.md": "jekyll",
-    "topics.md": "jekyll",
-  },
+    "*.html": "liquid",
+    "index.md": "liquid",
+    "about.md": "liquid",
+    "repos.md": "liquid",
+    "topics.md": "liquid"
+  }
 }
