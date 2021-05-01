@@ -39,4 +39,4 @@ The result will be something like:
     GITHUB_TOKEN=abcedf123
     ```
 
-This project is setup top _ignore_ this file to prevent it being accidentally committed and shared.
+This project has been set up to **ignore** this file, to prevent it being accidentally committed and shared publicly.
