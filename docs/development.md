@@ -2,19 +2,6 @@
 
 Notes for developing this project.
 
-- [Background](#background)
-- [Query](#query)
-- [Access token](#access-token)
-- [Styling](#styling)
-    - [CSS file](#css-file)
-- [Reloading](#reloading)
-- [Running scripts](#running-scripts)
-- [Format Ruby scripts](#format-ruby-scripts)
-- [Packages](#packages)
-    - [list.js](#listjs)
-    - [jemoji](#jemoji)
-    - [jekyll-timeago](#jekyll-timeago)
-    - [jekyll-github-metadata](#jekyll-github-metadata)
 
 ## Background
 
@@ -25,7 +12,8 @@ This _My GitHub Projects_ repo goes a step further by getting repos and their to
 I did a proof-of-concept for a Ruby plugin for GraphQL request using this repo - [MichaelCurrin/github-gql-ruby](https://github.com/MichaelCurrin/github-gql-ruby). However, the two projects have diverged as I made more changes in this project than that one, until I can make that one installable or as a submodule + symlink into plugins directory. Also this portfolio site will be easier for me to maintain using a Ruby library for GraphQL or a Python script (which would write out a JSON file to be read as a data file by Jekyll).
 I chose Ruby initially for interest so I could do something useful with Ruby but the solution is not so flexible for me.
 
-# Future development ideas
+
+## Future development ideas
 
 - [ ] Adding sorting of own repos by various fields.
 - [ ] Add section to focus on chosen repos as a showcase.
@@ -112,7 +100,7 @@ This does not help:
 gem 'eventmachine', '1.2.7'
 ```
 
-Update: Maybe adding eventmachine to Gemfile and bundle install would then help?
+Update: Maybe adding `eventmachine` to Gemfile and bundle install would then help?
 
 
 ## Format Ruby scripts
@@ -146,4 +134,4 @@ Adds support for showing a date as how long ago (e.g. `today` or `2 months and 2
 
 ### jekyll-github-metadata
 
-Take this out locally to avoid API rate limit warnings. You just won't get user profile data of the user, such as the logo.
+Take this out of `Gemfile` locally to avoid API rate limit warnings. You just won't get user profile data of the user, such as the logo.
