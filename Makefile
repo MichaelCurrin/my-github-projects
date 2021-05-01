@@ -26,15 +26,17 @@ install-gems:
 	bundle config set --local path vendor/bundle
 	bundle install
 
+install: install-js setup-js install-gems
+
 upgrade:
 	npm install list.js@latest
 	bundle update
 	git status --short
 
-install: install-js setup-js install-gems
 
 fmt:
 	bundle exec rufo _plugins
+
 
 s serve: fmt
 	source .env \
