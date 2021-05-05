@@ -123,6 +123,9 @@ DEPENDENCIES
   jekyll-timeago (~> 0.13)
   jemoji (~> 0.12)
   rufo (~> 0.12.0)
+  tzinfo (~> 1.2)
+  tzinfo-data
+  wdm (~> 0.1.1)
 
 BUNDLED WITH
-   2.1.4
+   2.2.16
