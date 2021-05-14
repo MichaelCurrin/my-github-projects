@@ -1,6 +1,7 @@
 {
   "name": "my-github-projects",
   "description": "Dev portfolio static site showing a user's GitHub repos grouped by topic",
+  "private": "true",
   "author": "MichaelCurrin",
   "license": "MIT",
   "dependencies": {
