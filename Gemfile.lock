@@ -80,7 +80,7 @@ GEM
     mini_portile2 (2.5.1)
     minitest (5.14.4)
     multipart-post (2.1.1)
-    nokogiri (1.11.3)
+    nokogiri (1.11.4)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     octokit (4.21.0)
@@ -121,11 +121,11 @@ DEPENDENCIES
   jekyll-seo-tag (~> 2.7, >= 2.7.1)
   jekyll-sitemap (~> 1.4)
   jekyll-timeago (~> 0.13)
-  jemoji (~> 0.12)
+  jemoji (~> 0.12, >= 0.12.0)
   rufo (~> 0.12.0)
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
 
 BUNDLED WITH
-   2.2.16
+   2.1.4
