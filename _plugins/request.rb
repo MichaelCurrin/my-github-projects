@@ -20,7 +20,7 @@ class Request
     )
 
     puts "Status: #{resp.status}"
-    if resp.status != 200
+    if resp.status > 299
       puts "Body:"
       puts resp.body
       raise "Request status: #{resp.status}"
@@ -44,6 +44,7 @@ class Request
 
   def test
     data = self.query()
+
     puts "Pretty printed response"
     puts JSON.pretty_generate data
   end
