@@ -15,7 +15,7 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
-    faraday (1.5.0)
+    faraday (1.5.1)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
       faraday-excon (~> 1.1)
@@ -30,7 +30,7 @@ GEM
     faraday-excon (1.1.0)
     faraday-httpclient (1.0.1)
     faraday-net_http (1.0.1)
-    faraday-net_http_persistent (1.1.0)
+    faraday-net_http_persistent (1.2.0)
     faraday-patron (1.0.0)
     ffi (1.15.3)
     forwardable-extended (2.6.0)
@@ -80,17 +80,13 @@ GEM
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     liquid (4.0.3)
-    listen (3.5.1)
+    listen (3.6.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
     mini_i18n (0.8.0)
-    mini_portile2 (2.5.3)
     minitest (5.14.4)
     multipart-post (2.1.1)
-    nokogiri (1.11.7)
-      mini_portile2 (~> 2.5.0)
-      racc (~> 1.4)
     nokogiri (1.11.7-x86_64-darwin)
       racc (~> 1.4)
     octokit (4.21.0)
@@ -105,7 +101,7 @@ GEM
       ffi (~> 1.0)
     rexml (3.2.5)
     rouge (3.26.0)
-    ruby2_keywords (0.0.4)
+    ruby2_keywords (0.0.5)
     rufo (0.12.0)
     safe_yaml (1.0.5)
     sassc (2.4.0)
@@ -122,7 +118,6 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  ruby
   x86_64-darwin-19
 
 DEPENDENCIES
@@ -141,4 +136,4 @@ DEPENDENCIES
   webrick (~> 1.7)
 
 BUNDLED WITH
-   2.1.4
+   2.2.15
