@@ -1,16 +1,16 @@
-    name: Scheduled Netlify deploy
+name: Scheduled Netlify deploy
 
-    on:
-      schedule:
-       - cron: "0 0 * * *"
-      workflow_dispatch:
-      
-    jobs:
-      deploy:
-        name: Deploy
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
-        runs-on: ubuntu-latest
+jobs:
+  deploy:
+    name: Deploy
 
-        steps:
-          - name: Request hook
-            run: curl -d '' https://api.netlify.com/build_hooks/${{ secrets.NETLIFY_HOOK_ID }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Request hook
+        run: curl -d '' https://api.netlify.com/build_hooks/${{ secrets.NETLIFY_HOOK_ID }}
