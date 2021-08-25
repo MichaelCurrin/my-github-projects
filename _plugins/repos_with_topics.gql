@@ -30,7 +30,7 @@ fragment Repos on RepositoryConnection {
 			}
 		}
 
-		# TODO use additional fields
+		# TODO: use additional fields, at risk of request timeout.
 		repositoryTopics(first: 100) {
 			nodes {
 				topic {
@@ -59,7 +59,7 @@ query ownedRepos {
 		}
 
 		forkedRepos: repositories(
-			first: 100
+			first: 30 # Avoid timeout because I have so many forks.
 			ownerAffiliations: OWNER
 			privacy: PUBLIC
 			isFork: true
