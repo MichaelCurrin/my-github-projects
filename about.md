@@ -15,12 +15,12 @@ This website is a showcase of my own repos and the topics they fit into. For my 
 
 ## What
 
-This project a static website hosted on [Netlify](netlify.com) for free and uses the following tools:
+This project a static website hosted on [Netlify](https://netlify.com) for free and uses the following tools:
 
 - [![Made with Jekyll](https://img.shields.io/badge/Made_with-Jekyll-blue?logo=jekyll)](https://jekyllrb.com)
-- [![Jekyll theme](https://img.shields.io/badge/Theme-jekyll%2D-bulma-blue)](https://github.com/jekyll-octopod/jekyll-bulma)
+- [![Jekyll theme](https://img.shields.io/badge/Theme-jekyll--bulma-blue)](https://github.com/jekyll-octopod/jekyll-bulma)
 - [![Made with Ruby](https://img.shields.io/badge/Made_with-Ruby-blue?logo=ruby)](https://www.ruby-lang.org)
-- [![Made with GitHub GQL](https://img.shields.io/badge/Made%20with-GitHub_GraphQL-blue?logo=graphql)](https://developer.github.com/v4/)
+- [![Made with GitHub GQL](https://img.shields.io/badge/Made%20with-GitHub_GraphQL-blue?logo=graphql&logoColor=white)](https://developer.github.com/v4/)
 
 
 ## How
@@ -34,5 +34,5 @@ You can fork and reuse this project to make a site showing your own GitHub repos
 
 The idea was inspired a quickstart dev portfolio that GitHub supplies:
 
-- Original repo: [github/personal-website](https://github.com/github/personal-website)
+- The original repo: [github/personal-website](https://github.com/github/personal-website)
 - My site, using a fork of the above: [michaelcurrin.github.io/](https://michaelcurrin.github.io/)
