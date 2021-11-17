@@ -59,7 +59,7 @@ query ownedRepos {
 		}
 
 		forkedRepos: repositories(
-			first: 30 # Avoid timeout because I have so many forks.
+			first: 10 # Avoid timeout because I have so many forks.
 			ownerAffiliations: OWNER
 			privacy: PUBLIC
 			isFork: true
