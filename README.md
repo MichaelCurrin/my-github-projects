@@ -6,7 +6,7 @@
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/my-github-projects?include_prereleases&sort=semver)](https://github.com/MichaelCurrin/my-github-projects/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 
-[![Made with Ruby](https://img.shields.io/badge/Ruby->=2.6-blue?logo=ruby)](https://www.ruby-lang.org)
+[![Made with Ruby](https://img.shields.io/badge/Ruby->=2.7-blue?logo=ruby)](https://www.ruby-lang.org)
 [![Made with Node.js](https://img.shields.io/badge/Node.js->=12-blue?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Uses GitHub GraphQL API](https://img.shields.io/badge/Made_with-GitHub_GraphQL_API-blue?logo=graphql&logoColor=white)](https://developer.github.com/v4/)
 
