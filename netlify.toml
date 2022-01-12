@@ -2,5 +2,9 @@
   command = "make setup-js build-prod"
   publish = "_site"
 
-[context]
+[context.production]
+  environment = { RUBY_VERSION = "2.7.0" }
+
+
+[context.deploy-preview]
   environment = { RUBY_VERSION = "2.7.0" }
