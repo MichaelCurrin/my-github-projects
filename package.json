@@ -1,6 +1,6 @@
 {
   "name": "my-github-projects",
-  "version": "0.10.1",
+  "version": "0.10.2",
   "description": "Dev portfolio static site showing a user's GitHub repos grouped by topic",
   "private": "true",
   "author": "MichaelCurrin",
