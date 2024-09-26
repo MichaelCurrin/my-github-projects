@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.2", ">= 4.2.0"
-gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.8", ">= 1.8.2"
 
 # Warning - in the start of 2020, Font Awesome was replaced, so from 0.9.0
 # onwards the `fa` icons won't work.
