@@ -15,7 +15,7 @@ group :jekyll_plugins do
 
   gem "jemoji", "~> 0.12", ">= 0.12.0"
 
-  gem "faraday", "~> 1.3"
+  gem "faraday", "~> 2.14"
   gem "jekyll-timeago", "~> 0.13"
 end
 
